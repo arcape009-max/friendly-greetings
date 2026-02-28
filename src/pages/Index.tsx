@@ -119,6 +119,27 @@ const Index = () => {
         </ScrollReveal>
       </section>
 
+      {/* ─── CREW CTA ─── */}
+      <section className="section-dark py-24 md:py-32 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="font-editorial text-xs tracking-[0.4em] opacity-40 mb-6">
+              Travel Together
+            </p>
+            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] mb-6">
+              FIND YOUR CREW
+            </h2>
+            <p className="font-body text-base opacity-60 mb-10 max-w-lg mx-auto">
+              Create a crew, join an existing one, or let AI match you with
+              fellow explorers heading to the same destinations.
+            </p>
+            <Link to="/crew" className="btn-premium-light inline-block">
+              Join a Crew
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ─── EXTREME NEXT CTA ─── */}
       <section className="section-dark py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">

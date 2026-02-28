@@ -2,3 +2,6 @@ project_id = "zgdacseurzhrwusdbigt"
 
 [functions.extreme-next]
 verify_jwt = false
+
+[functions.crew-match]
+verify_jwt = false
