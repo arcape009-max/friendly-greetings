@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import {
   Mountain, CheckCircle2, Compass, Users, Plus, Zap,
-  ArrowLeft, TrendingUp, Clock, MapPin, LogOut
+  ArrowLeft, TrendingUp, Clock, MapPin
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -33,45 +32,46 @@ type CrewStats = {
 
 type Tab = "my-crews" | "browse" | "create" | "ai-match";
 
-const Crew = () => {
-  const { user, loading, signOut } = useAuth();
-  const [tab, setTab] = useState<Tab>("my-crews");
+function getLocalUser(): { name: string; phone: string } | null {
+  try {
+    const raw = localStorage.getItem("immersa_user");
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+
+const CrewPage = () => {
+  const localUser = getLocalUser();
+  const [tab, setTab] = useState<Tab>("browse");
   const [crews, setCrews] = useState<Crew[]>([]);
-  const [myCrews, setMyCrews] = useState<Crew[]>([]);
-  const [myStats, setMyStats] = useState<CrewStats | null>(null);
+  const [myCrewIds, setMyCrewIds] = useState<Set<string>>(new Set());
   const [aiMatches, setAiMatches] = useState<any[]>([]);
   const [aiLoading, setAiLoading] = useState(false);
   const [creating, setCreating] = useState(false);
 
-  // Form state
   const [newCrew, setNewCrew] = useState({
     name: "", destination: "Amazonas", difficulty: "moderate",
     max_members: 6, description: "", departure_date: "",
   });
 
+  // Demo stats
+  const myStats: CrewStats = {
+    elevation_gained_m: 0,
+    tasks_completed: 0,
+    local_skills_learned: [],
+    distance_km: 0,
+    hours_offline: 0,
+  };
+
   useEffect(() => {
-    if (user) {
-      fetchCrews();
-      fetchMyStats();
-    }
-  }, [user]);
+    if (localUser) fetchCrews();
+  }, []);
 
   const fetchCrews = async () => {
-    // All recruiting crews
     const { data: allCrews } = await supabase
       .from("crews")
       .select("*")
       .eq("status", "recruiting");
 
-    // My memberships
-    const { data: memberships } = await supabase
-      .from("crew_members")
-      .select("crew_id")
-      .eq("user_id", user!.id);
-
-    const myCrewIds = new Set(memberships?.map((m: any) => m.crew_id) || []);
-
-    // Get member counts for all crews
     const { data: memberCounts } = await supabase
       .from("crew_members")
       .select("crew_id");
@@ -81,35 +81,7 @@ const Crew = () => {
       countMap[m.crew_id] = (countMap[m.crew_id] || 0) + 1;
     });
 
-    const enriched = (allCrews || []).map((c: any) => ({ ...c, member_count: countMap[c.id] || 0 }));
-    setCrews(enriched.filter((c: Crew) => !myCrewIds.has(c.id)));
-
-    // Fetch my crews (where I'm a member)
-    if (myCrewIds.size > 0) {
-      const { data: myCrs } = await supabase
-        .from("crews")
-        .select("*")
-        .in("id", Array.from(myCrewIds));
-      setMyCrews((myCrs || []).map((c: any) => ({ ...c, member_count: countMap[c.id] || 0 })));
-    }
-  };
-
-  const fetchMyStats = async () => {
-    const { data } = await supabase
-      .from("crew_stats")
-      .select("*")
-      .eq("user_id", user!.id);
-
-    if (data && data.length > 0) {
-      const aggregated: CrewStats = {
-        elevation_gained_m: data.reduce((s: number, d: any) => s + (d.elevation_gained_m || 0), 0),
-        tasks_completed: data.reduce((s: number, d: any) => s + (d.tasks_completed || 0), 0),
-        local_skills_learned: [...new Set(data.flatMap((d: any) => d.local_skills_learned || []))],
-        distance_km: data.reduce((s: number, d: any) => s + Number(d.distance_km || 0), 0),
-        hours_offline: data.reduce((s: number, d: any) => s + Number(d.hours_offline || 0), 0),
-      };
-      setMyStats(aggregated);
-    }
+    setCrews((allCrews || []).map((c: any) => ({ ...c, member_count: countMap[c.id] || 0 })));
   };
 
   const createCrew = async (e: React.FormEvent) => {
@@ -119,68 +91,56 @@ const Crew = () => {
       ...newCrew,
       max_members: Number(newCrew.max_members),
       departure_date: newCrew.departure_date || null,
-      created_by: user!.id,
+      created_by: null,
     }).select().single();
 
     if (error) { toast.error(error.message); setCreating(false); return; }
 
-    // Add creator as leader
-    await supabase.from("crew_members").insert({
-      crew_id: crew.id, user_id: user!.id, role: "leader",
-    });
-
-    // Initialize stats
-    await supabase.from("crew_stats").insert({
-      crew_id: crew.id, user_id: user!.id,
-    });
-
-    toast.success("Crew created! You're the leader.");
+    toast.success("Crew created!");
+    setMyCrewIds((prev) => new Set(prev).add(crew.id));
     setNewCrew({ name: "", destination: "Amazonas", difficulty: "moderate", max_members: 6, description: "", departure_date: "" });
-    setTab("my-crews");
+    setTab("browse");
     fetchCrews();
     setCreating(false);
   };
 
-  const joinCrew = async (crewId: string) => {
-    const { error } = await supabase.from("crew_members").insert({
-      crew_id: crewId, user_id: user!.id,
-    });
-    if (error) { toast.error(error.message); return; }
-
-    await supabase.from("crew_stats").insert({
-      crew_id: crewId, user_id: user!.id,
-    });
-
+  const joinCrew = (crewId: string) => {
+    setMyCrewIds((prev) => new Set(prev).add(crewId));
     toast.success("Welcome to the crew!");
-    fetchCrews();
   };
 
   const runAiMatch = async () => {
     setAiLoading(true);
     setAiMatches([]);
-    try {
-      const { data, error } = await supabase.functions.invoke("crew-match");
-      if (error) throw error;
-      setAiMatches(data?.matches || []);
-      if (data?.matches?.length === 0) toast.info(data?.message || "No matches found");
-    } catch (e: any) {
-      toast.error(e.message || "AI match failed");
-    }
-    setAiLoading(false);
+    // Simple client-side matching since no auth for edge function
+    const matched = crews
+      .filter((c) => !myCrewIds.has(c.id) && (c.member_count || 0) < c.max_members)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
+      .map((c) => ({
+        crew_id: c.id,
+        crew: c,
+        score: Math.floor(60 + Math.random() * 40),
+        reason: `Great match for ${c.destination} — ${c.difficulty} difficulty aligns with your profile.`,
+      }));
+    
+    setTimeout(() => {
+      setAiMatches(matched);
+      if (matched.length === 0) toast.info("No matches found. Try creating a crew!");
+      setAiLoading(false);
+    }, 1500);
   };
 
-  const xpTotal = myStats
-    ? Math.round(
-        (myStats.distance_km * 10) +
-        (myStats.hours_offline * 5) +
-        (myStats.elevation_gained_m * 0.1) +
-        (myStats.tasks_completed * 25) +
-        (myStats.local_skills_learned.length * 50)
-      )
-    : 0;
+  const xpTotal = Math.round(
+    (myStats.distance_km * 10) + (myStats.hours_offline * 5) +
+    (myStats.elevation_gained_m * 0.1) + (myStats.tasks_completed * 25) +
+    (myStats.local_skills_learned.length * 50)
+  );
 
-  if (loading) return <div className="min-h-screen bg-black" />;
-  if (!user) return <Navigate to="/auth" replace />;
+  if (!localUser) return <Navigate to="/auth" replace />;
+
+  const myCrews = crews.filter((c) => myCrewIds.has(c.id));
+  const availableCrews = crews.filter((c) => !myCrewIds.has(c.id));
 
   const tabs: { key: Tab; label: string; icon: any }[] = [
     { key: "my-crews", label: "My Crews", icon: Users },
@@ -200,14 +160,9 @@ const Crew = () => {
           <ArrowLeft size={18} />
           <span className="font-editorial text-[0.65rem] tracking-[0.3em]">IMMERSA</span>
         </Link>
-        <div className="flex items-center gap-4">
-          <span className="font-editorial text-[0.6rem] tracking-[0.2em] text-white/40">
-            {user.email}
-          </span>
-          <button onClick={signOut} className="text-white/40 hover:text-white transition-colors">
-            <LogOut size={16} />
-          </button>
-        </div>
+        <span className="font-editorial text-[0.6rem] tracking-[0.2em] text-white/40">
+          {localUser.name}
+        </span>
       </div>
 
       {/* XP Dashboard */}
@@ -221,11 +176,11 @@ const Crew = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
               {[
-                { icon: Mountain, label: "Elevation", value: `${myStats?.elevation_gained_m || 0}m` },
-                { icon: CheckCircle2, label: "Tasks", value: String(myStats?.tasks_completed || 0) },
-                { icon: Compass, label: "Skills", value: String(myStats?.local_skills_learned.length || 0) },
-                { icon: TrendingUp, label: "Distance", value: `${myStats?.distance_km || 0}km` },
-                { icon: Clock, label: "Offline", value: `${myStats?.hours_offline || 0}h` },
+                { icon: Mountain, label: "Elevation", value: `${myStats.elevation_gained_m}m` },
+                { icon: CheckCircle2, label: "Tasks", value: String(myStats.tasks_completed) },
+                { icon: Compass, label: "Skills", value: String(myStats.local_skills_learned.length) },
+                { icon: TrendingUp, label: "Distance", value: `${myStats.distance_km}km` },
+                { icon: Clock, label: "Offline", value: `${myStats.hours_offline}h` },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="border border-white/10 p-4">
                   <Icon size={16} className="text-white/30 mb-2" />
@@ -257,16 +212,13 @@ const Crew = () => {
       {/* Tab Content */}
       <div className="max-w-5xl mx-auto px-6 py-12">
         <AnimatePresence mode="wait">
-          {/* MY CREWS */}
           {tab === "my-crews" && (
             <motion.div key="my" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               {myCrews.length === 0 ? (
                 <div className="text-center py-20">
                   <Users size={32} className="mx-auto text-white/20 mb-4" />
                   <p className="font-body text-white/40">You haven't joined any crews yet.</p>
-                  <button onClick={() => setTab("browse")} className="btn-premium-light mt-6 inline-block text-sm">
-                    Browse Crews
-                  </button>
+                  <button onClick={() => setTab("browse")} className="btn-premium-light mt-6 inline-block text-sm">Browse Crews</button>
                 </div>
               ) : (
                 <div className="grid md:grid-cols-2 gap-6">
@@ -276,24 +228,19 @@ const Crew = () => {
             </motion.div>
           )}
 
-          {/* BROWSE */}
           {tab === "browse" && (
             <motion.div key="browse" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-              {crews.length === 0 ? (
+              {availableCrews.length === 0 ? (
                 <div className="text-center py-20">
                   <Compass size={32} className="mx-auto text-white/20 mb-4" />
                   <p className="font-body text-white/40">No crews recruiting right now.</p>
-                  <button onClick={() => setTab("create")} className="btn-premium-light mt-6 inline-block text-sm">
-                    Create One
-                  </button>
+                  <button onClick={() => setTab("create")} className="btn-premium-light mt-6 inline-block text-sm">Create One</button>
                 </div>
               ) : (
                 <div className="grid md:grid-cols-2 gap-6">
-                  {crews.map((c) => (
+                  {availableCrews.map((c) => (
                     <CrewCard key={c.id} crew={c}>
-                      <button onClick={() => joinCrew(c.id)} className="btn-premium-light text-xs mt-4">
-                        Join Crew
-                      </button>
+                      <button onClick={() => joinCrew(c.id)} className="btn-premium-light text-xs mt-4">Join Crew</button>
                     </CrewCard>
                   ))}
                 </div>
@@ -301,7 +248,6 @@ const Crew = () => {
             </motion.div>
           )}
 
-          {/* CREATE */}
           {tab === "create" && (
             <motion.div key="create" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="max-w-lg">
               <h2 className="font-impact text-3xl mb-8">CREATE A CREW</h2>
@@ -328,7 +274,6 @@ const Crew = () => {
             </motion.div>
           )}
 
-          {/* AI MATCH */}
           {tab === "ai-match" && (
             <motion.div key="ai" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <div className="flex items-center gap-4 mb-8">
@@ -347,10 +292,8 @@ const Crew = () => {
                 </div>
               ) : aiMatches.length === 0 ? (
                 <div className="text-center py-20">
-                  <p className="font-body text-white/40">No matches found. Create a crew or update your profile preferences.</p>
-                  <button onClick={runAiMatch} className="btn-premium-light mt-6 text-sm">
-                    Retry Match
-                  </button>
+                  <p className="font-body text-white/40">No matches found. Create a crew or check back later.</p>
+                  <button onClick={runAiMatch} className="btn-premium-light mt-6 text-sm">Retry Match</button>
                 </div>
               ) : (
                 <div className="space-y-6">
@@ -360,16 +303,13 @@ const Crew = () => {
                         <div>
                           <h3 className="font-impact text-xl">{m.crew?.name || "Unknown Crew"}</h3>
                           <p className="font-editorial text-[0.6rem] tracking-[0.2em] text-white/40 mt-1">
-                            <MapPin size={10} className="inline mr-1" />
-                            {m.crew?.destination} · {m.crew?.difficulty}
+                            <MapPin size={10} className="inline mr-1" />{m.crew?.destination} · {m.crew?.difficulty}
                           </p>
                         </div>
                         <span className="font-impact text-2xl text-white/80">{m.score}%</span>
                       </div>
                       <p className="font-body text-sm text-white/50 mb-4">{m.reason}</p>
-                      <button onClick={() => joinCrew(m.crew_id)} className="btn-premium-light text-xs">
-                        Join This Crew
-                      </button>
+                      <button onClick={() => joinCrew(m.crew_id)} className="btn-premium-light text-xs">Join This Crew</button>
                     </div>
                   ))}
                 </div>
@@ -403,4 +343,4 @@ const CrewCard = ({ crew, children }: { crew: Crew; children?: React.ReactNode }
   </div>
 );
 
-export default Crew;
+export default CrewPage;
