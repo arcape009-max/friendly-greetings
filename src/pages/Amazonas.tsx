@@ -5,10 +5,11 @@ import { ArrowLeft, Calendar, Users, Plane, Clock } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import heroAmazonas from "@/assets/hero-amazonas.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
+import guainiaCerros from "@/assets/guainia-cerros.jpg";
+import guainiaRiver from "@/assets/guainia-river.jpg";
+import guainiaOtter from "@/assets/guainia-otter.jpg";
+import guainiaCassava from "@/assets/guainia-cassava.jpg";
+import guainiaExplorer from "@/assets/guainia-explorer.jpg";
 
 const itinerary = [
   { day: 1, title: "Journey along the Inírida River", desc: "Explore the Honey and Handicrafts Route in the Community of La Ceiba. Continue to the Cerros de Mavicure and enjoy the landscape at sunset." },
@@ -137,22 +138,6 @@ const Amazonas = () => {
         </div>
       </section>
 
-      {/* ─── GALLERY ─── */}
-      <section className="px-6 md:px-16 pb-32">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[gallery1, gallery2, gallery3, gallery4].map((img, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
-              <div className={`overflow-hidden ${i % 2 === 0 ? "aspect-[3/4]" : "aspect-square"}`}>
-                <img
-                  src={img}
-                  alt={`Guainía gallery ${i + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
 
       {/* ─── PACKAGE BUILDER ─── */}
       <section className="section-dark py-32 md:py-40 px-6">
