@@ -119,6 +119,27 @@ const Index = () => {
         </ScrollReveal>
       </section>
 
+      {/* ─── EXTREME NEXT CTA ─── */}
+      <section className="section-dark py-24 md:py-32 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="font-editorial text-xs tracking-[0.4em] opacity-40 mb-6">
+              AI-Powered Discovery
+            </p>
+            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] mb-6">
+              EXTREME NEXT
+            </h2>
+            <p className="font-body text-base opacity-60 mb-10 max-w-lg mx-auto">
+              Tell us where you've been. Our AI analyzes your travel DNA and
+              recommends extreme destinations that push your boundaries.
+            </p>
+            <Link to="/extreme-next" className="btn-premium-light inline-block">
+              Discover Your Next Adventure
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ─── OUR STORY ─── */}
       <section className="section-dark py-32 md:py-48 px-6">
         <div className="max-w-3xl mx-auto text-center">
