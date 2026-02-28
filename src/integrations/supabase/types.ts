@@ -168,9 +168,59 @@ export type Database = {
         }
         Relationships: []
       }
+      travelers: {
+        Row: {
+          created_at: string
+          destination: string
+          difficulty: string
+          id: string
+          name: string
+          phone: string
+        }
+        Insert: {
+          created_at?: string
+          destination: string
+          difficulty?: string
+          id?: string
+          name: string
+          phone: string
+        }
+        Update: {
+          created_at?: string
+          destination?: string
+          difficulty?: string
+          id?: string
+          name?: string
+          phone?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
-      [_ in never]: never
+      travelers_public: {
+        Row: {
+          created_at: string | null
+          destination: string | null
+          difficulty: string | null
+          id: string | null
+          name: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          destination?: string | null
+          difficulty?: string | null
+          id?: string | null
+          name?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          destination?: string | null
+          difficulty?: string | null
+          id?: string | null
+          name?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never
