@@ -16,25 +16,25 @@ const Index = () => {
         <img
           src={heroHome}
           alt="Amazon rainforest canopy at golden hour"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+          className="absolute inset-0 w-full h-full object-cover" />
+
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 text-center px-6">
           <motion.h1
             className="font-impact text-[clamp(4rem,15vw,12rem)] leading-[0.9] text-primary-foreground"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-          >
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}>
+
             IMMERSA
           </motion.h1>
           <motion.p
             className="font-editorial text-xs sm:text-sm text-primary-foreground/80 mt-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            Authentic Travel. Real Connection. Deep Nature.
+            transition={{ duration: 1, delay: 0.8 }}>AUTHENTIC TRAVEL. REAL CONNECTION. REAL CHALLENGE.
+
+
           </motion.p>
         </div>
       </section>
@@ -63,8 +63,8 @@ const Index = () => {
               <img
                 src={destAmazonas}
                 alt="Indigenous community in the Amazon"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+
               <div className="hero-overlay absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
               <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12">
                 <h2 className="font-impact text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] text-primary-foreground">
@@ -84,8 +84,8 @@ const Index = () => {
             <img
               src={destAntarctica}
               alt="Antarctic icebergs"
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover" />
+
             <div className="hero-overlay absolute inset-0 opacity-40" />
             <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-right">
               <h2 className="font-impact text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] text-primary-foreground">
@@ -104,8 +104,8 @@ const Index = () => {
             <img
               src={destSafari}
               alt="African safari at sunset"
-              className="w-full h-full object-cover"
-            />
+              className="w-full h-full object-cover" />
+
             <div className="hero-overlay absolute inset-0 opacity-40" />
             <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12">
               <h2 className="font-impact text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] text-primary-foreground">
@@ -172,15 +172,15 @@ const Index = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 font-body text-base">
               <a
                 href="mailto:hello@immersa.co"
-                className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors"
-              >
+                className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors">
+
                 <Mail size={18} />
                 hello@immersa.co
               </a>
               <a
                 href="tel:+447411997085"
-                className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors"
-              >
+                className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors">
+
                 <Phone size={18} />
                 +44 7411997085
               </a>
@@ -197,8 +197,8 @@ const Index = () => {
       </footer>
 
       <WhatsAppButton />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
