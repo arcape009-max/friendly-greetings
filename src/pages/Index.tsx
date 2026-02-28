@@ -32,7 +32,7 @@ const Index = () => {
             className="font-editorial text-xs sm:text-sm text-primary-foreground/80 mt-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}>AUTHENTIC TRAVEL. REAL CONNECTION. REAL CHALLENGE.
+            transition={{ duration: 1, delay: 0.8 }}>AUTHENTIC TRAVEL. REAL CONNECTION. PUSHING YOURSELF.
 
 
           </motion.p>
@@ -45,8 +45,8 @@ const Index = () => {
           <ScrollReveal>
             <p className="font-body text-lg md:text-xl leading-relaxed text-foreground/80">
               We believe exploring the world's most remarkable places responsibly
-              is possible. We offer community-based, sustainable tourism that
-              takes you to the most wonderful places on Earth. Discover new
+              is possible. We design crew-based expeditions to extreme, remote,
+              and culturally intense locations around the world. Discover new
               cultures, experience authentic transformations, and find your true
               self in deep nature.
             </p>
@@ -152,9 +152,8 @@ const Index = () => {
             <p className="font-body text-lg md:text-xl leading-relaxed opacity-80">
               IMMERSA was born from a University College London (UCL) project
               with a singular vision: to connect passionate travelers with the
-              most breathtaking, off-the-grid locations on Earth, ensuring that
-              tourism creates a profound, positive social impact on local
-              communities.
+              most breathtaking, off-the-grid locations on Earth. This is where
+              comfort disappears and growth begins.
             </p>
           </ScrollReveal>
         </div>
