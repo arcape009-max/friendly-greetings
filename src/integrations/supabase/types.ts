@@ -14,7 +14,160 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      crew_members: {
+        Row: {
+          crew_id: string
+          id: string
+          joined_at: string
+          role: string
+          user_id: string
+        }
+        Insert: {
+          crew_id: string
+          id?: string
+          joined_at?: string
+          role?: string
+          user_id: string
+        }
+        Update: {
+          crew_id?: string
+          id?: string
+          joined_at?: string
+          role?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "crew_members_crew_id_fkey"
+            columns: ["crew_id"]
+            isOneToOne: false
+            referencedRelation: "crews"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      crew_stats: {
+        Row: {
+          crew_id: string
+          distance_km: number
+          elevation_gained_m: number
+          hours_offline: number
+          id: string
+          local_skills_learned: string[] | null
+          tasks_completed: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          crew_id: string
+          distance_km?: number
+          elevation_gained_m?: number
+          hours_offline?: number
+          id?: string
+          local_skills_learned?: string[] | null
+          tasks_completed?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          crew_id?: string
+          distance_km?: number
+          elevation_gained_m?: number
+          hours_offline?: number
+          id?: string
+          local_skills_learned?: string[] | null
+          tasks_completed?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "crew_stats_crew_id_fkey"
+            columns: ["crew_id"]
+            isOneToOne: false
+            referencedRelation: "crews"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      crews: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          departure_date: string | null
+          description: string | null
+          destination: string
+          difficulty: string
+          id: string
+          max_members: number
+          name: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          departure_date?: string | null
+          description?: string | null
+          destination: string
+          difficulty?: string
+          id?: string
+          max_members?: number
+          name: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          departure_date?: string | null
+          description?: string | null
+          destination?: string
+          difficulty?: string
+          id?: string
+          max_members?: number
+          name?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          difficulty_preference: string
+          display_name: string
+          experience_level: string
+          id: string
+          preferred_destinations: string[] | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          difficulty_preference?: string
+          display_name?: string
+          experience_level?: string
+          id?: string
+          preferred_destinations?: string[] | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          difficulty_preference?: string
+          display_name?: string
+          experience_level?: string
+          id?: string
+          preferred_destinations?: string[] | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
