@@ -4,7 +4,7 @@ import { Mail, Phone } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import heroHome from "@/assets/hero-home.jpg";
-import heroAmazonas from "@/assets/hero-amazonas.jpg";
+import destAmazonas from "@/assets/dest-amazonas.jpg";
 import destAntarctica from "@/assets/dest-antarctica.jpg";
 import destSafari from "@/assets/dest-safari.jpg";
 
@@ -61,8 +61,8 @@ const Index = () => {
           <Link to="/amazonas" className="group block relative">
             <div className="relative w-full md:w-[85%] aspect-[16/9] overflow-hidden">
               <img
-                src={heroAmazonas}
-                alt="Cerros de Mavecure, Amazonas"
+                src={destAmazonas}
+                alt="Indigenous community in the Amazon"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="hero-overlay absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
