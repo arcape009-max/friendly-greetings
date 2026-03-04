@@ -80,6 +80,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ─── DESTINATIONS INTRO ─── */}
+      <section className="pt-8 pb-20 md:pb-28 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="font-editorial text-xs tracking-[0.4em] text-muted-foreground mb-6">
+              Destinations
+            </p>
+            <h2 className="font-impact text-[clamp(1.8rem,5vw,3.5rem)] leading-[1]">
+              SOME PLACES STILL FEEL LIKE MAGIC.
+            </h2>
+            <p className="font-body text-sm text-foreground/50 mt-4">
+              Go find them yourself.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ─── DESTINATIONS ─── */}
       <section className="pb-32 md:pb-48 space-y-16 md:space-y-24">
         {/* Amazonas - links to /amazonas */}
