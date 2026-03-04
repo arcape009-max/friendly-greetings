@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, ShieldCheck, CreditCard, Compass, Heart, Users, BookOpen } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCard from "@/components/TestimonialCard";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -284,41 +284,82 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ─── CONTACT / FOOTER ─── */}
-      <footer className="py-24 md:py-32 px-6">
-        <div className="max-w-4xl mx-auto">
-          <ScrollReveal>
-            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-16">
-              Get In Touch
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12 font-body text-base">
-              <a
-                href="mailto:hello@immersa.co"
-                className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors">
-
-                <Mail size={18} />
-                hello@immersa.co
-              </a>
-              <a
-                href="tel:+447411997085"
-                className="flex items-center gap-3 text-foreground/70 hover:text-foreground transition-colors">
-
-                <Phone size={18} />
-                +44 7411997085
-              </a>
+      {/* ─── TRUST & INFO ─── */}
+      <section className="py-16 md:py-20 px-6 border-t border-border/15">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Navigate</h4>
+              <ul className="space-y-3">
+                {[
+                  { icon: BookOpen, label: "How to Book" },
+                  { icon: Heart, label: "Our Promise" },
+                  { icon: Users, label: "About Us" },
+                  { icon: Compass, label: "Our Guarantees" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <a href="#" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors group">
+                      <item.icon size={14} className="text-accent group-hover:text-foreground transition-colors" />
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.3}>
-            <div className="text-center mt-20">
-              <p className="font-editorial text-[0.65rem] tracking-[0.4em] text-muted-foreground">
-                © 2026 IMMERSA. All rights reserved.
-              </p>
+
+            {/* Trust & Security */}
+            <div>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Trust & Security</h4>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-2.5 font-body text-xs text-foreground/50">
+                  <ShieldCheck size={14} className="text-accent" />
+                  Travel Insurance
+                </li>
+                <li className="flex items-center gap-2.5 font-body text-xs text-foreground/50">
+                  <CreditCard size={14} className="text-accent" />
+                  Secure Payment
+                </li>
+              </ul>
             </div>
-          </ScrollReveal>
+
+            {/* Contact */}
+            <div>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Get In Touch</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="mailto:hello@immersa.co" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors">
+                    <Mail size={14} className="text-accent" />
+                    hello@immersa.co
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+447411997085" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors">
+                    <Phone size={14} className="text-accent" />
+                    +44 7411997085
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Brand */}
+            <div className="flex flex-col justify-between">
+              <div>
+                <h4 className="font-impact text-lg tracking-wide mb-2 text-foreground/80">IMMERSA</h4>
+                <p className="font-body text-[0.65rem] text-foreground/40 leading-relaxed">
+                  Authentic travel. Real connection. Pushing yourself beyond the ordinary.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-14 pt-6 border-t border-border/10 text-center">
+            <p className="font-editorial text-[0.6rem] tracking-[0.4em] text-muted-foreground">
+              © 2026 IMMERSA. All rights reserved.
+            </p>
+          </div>
         </div>
-      </footer>
+      </section>
 
       <WhatsAppButton />
     </div>);
