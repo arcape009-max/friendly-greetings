@@ -17,6 +17,7 @@ import tHorses2 from "@/assets/testimonial-horses-2.jpg";
 import tDeer from "@/assets/testimonial-deer.jpg";
 import tLagoon from "@/assets/testimonial-lagoon.jpg";
 import tCapybara from "@/assets/testimonial-capybara.jpg";
+import tCattle from "@/assets/testimonial-cattle.jpg";
 
 const Index = () => {
   return (
@@ -177,10 +178,10 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] text-section-green-foreground/50 mb-6 text-center">
-              What Travelers Say
+              In Their Words
             </p>
             <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-16 text-section-green-foreground">
-              GUEST FEEDBACK
+              STORIES FROM THE WILD
             </h2>
           </ScrollReveal>
 
@@ -191,7 +192,7 @@ const Index = () => {
                 location: "London, UK",
                 stars: 5,
                 tags: ["Jaguar Encounter", "Life-Changing"],
-                photos: [tKayakSunset, tThatchedSunset, tDeer],
+                photos: [tCattle, tThatchedSunset, tDeer],
                 quote:
                   "Watching a jaguar emerge from the undergrowth ten metres away rewired something in me. I came home a different person — calmer, braver, more grateful. This wasn't a tour; it was a turning point in my life.",
               },
