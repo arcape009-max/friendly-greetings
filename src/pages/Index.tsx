@@ -55,68 +55,87 @@ const Index = () => {
       </section>
 
       {/* ─── VALUE PROPOSITIONS ─── */}
-      <section className="pb-32 md:pb-48 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-32 md:py-48 px-6">
+        <div className="max-w-5xl mx-auto">
           <ScrollReveal>
-            <p className="font-editorial text-xs tracking-[0.4em] text-muted-foreground mb-16 text-center">
-              Why Immersa
-            </p>
+            <div className="text-center mb-20 md:mb-28">
+              <p className="font-editorial text-xs tracking-[0.4em] text-muted-foreground mb-6">
+                Why Immersa
+              </p>
+              <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] leading-[0.95]">
+                TRAVEL THAT MATTERS
+              </h2>
+            </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-border/60">
             {[
               {
-                icon: "compass",
+                icon: (
+                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                ),
                 title: "Beyond Traditional Travel",
                 desc: "Not a packaged tour. We build raw, real expeditions that no mainstream agency would dare to offer.",
+                accent: "01",
               },
               {
-                icon: "users",
+                icon: (
+                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                ),
                 title: "Local Destination Experts",
-                desc: "Every journey is guided by people who were born and raised in the territory — not outsiders reading a script.",
+                desc: "Every journey is guided by people born and raised in the territory — not outsiders reading a script.",
+                accent: "02",
               },
               {
-                icon: "message-circle",
+                icon: (
+                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                ),
                 title: "Co-Create Your Journey",
                 desc: "Work directly with your bilingual local agency to tailor every detail — routes, pace, and depth of immersion.",
+                accent: "03",
               },
               {
-                icon: "heart",
-                title: "60 %+ Back to Communities",
-                desc: "Memorable experiences with real impact. At least 60 % of every trip price flows directly into local communities.",
+                icon: (
+                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                ),
+                title: "60%+ Back to Communities",
+                desc: "Memorable experiences with real impact. At least 60% of every trip price flows directly into local communities.",
+                accent: "04",
               },
-            ].map((item, i) => {
-              const icons: Record<string, JSX.Element> = {
-                compass: (
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-                ),
-                users: (
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                ),
-                "message-circle": (
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                ),
-                heart: (
-                  <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                ),
-              };
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <motion.div
+                  className={`group relative p-10 md:p-12 flex flex-col border-border/60 transition-colors duration-500 hover:bg-accent/5 ${
+                    i < 2 ? "border-b" : ""
+                  } ${i % 2 === 0 ? "md:border-r" : ""}`}
+                  whileHover={{ scale: 1.01 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                >
+                  {/* Number accent */}
+                  <span className="font-editorial text-[0.6rem] tracking-[0.5em] text-accent/50 mb-8">
+                    {item.accent}
+                  </span>
 
-              return (
-                <ScrollReveal key={i} delay={i * 0.12}>
-                  <div className="flex flex-col items-center text-center px-4">
-                    <div className="w-14 h-14 rounded-full border border-accent/40 flex items-center justify-center mb-6 text-accent">
-                      {icons[item.icon]}
-                    </div>
-                    <h3 className="font-impact text-base mb-3 tracking-wide">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-sm text-foreground/60 leading-relaxed">
-                      {item.desc}
-                    </p>
+                  {/* Icon */}
+                  <div className="text-accent mb-6 transition-transform duration-500 group-hover:translate-x-1">
+                    {item.icon}
                   </div>
-                </ScrollReveal>
-              );
-            })}
+
+                  {/* Title */}
+                  <h3 className="font-impact text-lg md:text-xl mb-4 tracking-wide leading-tight">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-body text-sm text-foreground/55 leading-[1.9]">
+                    {item.desc}
+                  </p>
+
+                  {/* Subtle corner accent on hover */}
+                  <div className="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-accent/0 group-hover:border-accent/30 transition-all duration-500" />
+                </motion.div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
