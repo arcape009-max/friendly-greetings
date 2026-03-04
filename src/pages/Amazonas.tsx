@@ -426,6 +426,55 @@ const Amazonas = () => {
         )}
       </AnimatePresence>
 
+      {/* ─── RECOMMENDED 8-DAY TOUR ─── */}
+      <section className="py-32 md:py-40 px-6 border-t border-white/10">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <p className="font-editorial text-xs tracking-[0.4em] text-white/40 mb-4">
+              Into the Wild
+            </p>
+            <h2 className="font-impact text-[clamp(2rem,5vw,3.5rem)] mb-6">
+              Recommended 8-Day Tour
+            </h2>
+            <p className="font-body text-base md:text-lg text-white/50 leading-relaxed mb-20 max-w-xl">
+              Eight days off the grid. Rivers as roads, jungle as shelter, and ancient cultures as your compass.
+            </p>
+          </ScrollReveal>
+
+          <div className="relative pl-10 md:pl-16">
+            <div className="absolute left-0 top-0 bottom-0 w-px bg-white/15 ml-3" />
+
+            {[
+              { day: 1, title: "Journey Along the Inírida River", desc: "Push upriver into the unknown. Trace the Honey and Handicrafts Route through La Ceiba, then press on to the legendary Cerros de Mavicure — arriving just as the sun drops behind the tepuis." },
+              { day: 2, title: "Cerros de Mavicure", desc: "Rise before dawn and climb into the clouds for a sunrise that rewrites your sense of scale. Indigenous legends echo off the rock. By afternoon, a safari-style trek leads you to Cerro Diablo as golden light floods the canopy." },
+              { day: 3, title: "River Star of the South & Ecolodge Yupi Nai", desc: "Trade boots for a kayak. Glide along mirror-still waters, tracking herons and flashes of silver beneath the surface. When night falls, stories are told under a sky with no light pollution." },
+              { day: 4, title: "White Sand Savannas", desc: "Wade through crystal-clear reddish streams on foot and by canoe. Spot carnivorous plants, the iconic Flor de Inírida, and the pink flash of river dolphins breaking the surface. Afternoon: cast a line alongside local fishermen." },
+              { day: 5, title: "The Resonance of the Petroglyphs", desc: "Dawn birdwatching deep in primary forest. Then navigate the sacred Atabapo River to ancient rock engravings — messages carved millennia before maps existed. After dark, a nocturnal expedition reveals amphibians and night birds." },
+              { day: 6, title: "Trail to Piedra Yavi", desc: "Cross shifting ecosystems toward the sacred forest of Piedra Yavi. A guided forest-therapy session strips away the noise. In the afternoon, paddle the Cuitara stream — silence broken only by your own breath and the drip of water off the paddle." },
+              { day: 7, title: "The Sacred Cave of the Piaroa People", desc: "Scramble up to the \"Stone of the Spring,\" rappel into its heart, and emerge changed. Walk through ancestral conucos learning the medicine, fruit, and cassava that sustain these communities. The final night ends around a bonfire on the beach — no agenda, just firelight." },
+              { day: 8, title: "Departure", desc: "The river carries you back to Inírida. Transfer to the airport. The jungle stays with you." },
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.08}>
+                <div className="mb-14 relative">
+                  <div className="absolute -left-10 md:-left-16 top-1 w-6 h-6 rounded-full border border-white/20 bg-black flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-accent" />
+                  </div>
+                  <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-white/40 mb-2">
+                    Day {item.day}
+                  </p>
+                  <h3 className="font-impact text-xl md:text-2xl mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="font-body text-sm md:text-base text-white/60 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── FOOTER ─── */}
       <footer className="py-16 px-6 text-center border-t border-white/10">
         <p className="font-editorial text-[0.6rem] tracking-[0.4em] text-white/30">
