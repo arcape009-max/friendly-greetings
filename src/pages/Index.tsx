@@ -40,7 +40,7 @@ const Index = () => {
       </section>
 
       {/* ─── SCROLL-REVEAL INTRO ─── */}
-      <section className="py-32 md:py-48 px-6">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="font-body text-lg md:text-xl leading-relaxed text-foreground/80">
