@@ -83,7 +83,7 @@ const Index = () => {
           <div className="relative w-full md:w-[85%] aspect-[16/9] overflow-hidden">
             <img
               src={destLlanos}
-              alt="Jaguar in Colombian Llanos Orientales"
+              alt="Horses and cattle grazing in the Colombian Llanos Orientales"
               className="w-full h-full object-cover" />
 
             <div className="hero-overlay absolute inset-0 opacity-40" />
