@@ -85,13 +85,13 @@ const Index = () => {
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] text-muted-foreground mb-6">
-              Destinations
+              Our Destinations
             </p>
             <h2 className="font-impact text-[clamp(1.8rem,5vw,3.5rem)] leading-[1]">
-              SOME PLACES STILL FEEL LIKE MAGIC.
+              THERE ARE PLACES WHERE MAGIC BECOMES REALITY
             </h2>
             <p className="font-body text-sm text-foreground/50 mt-4">
-              Go find them yourself.
+              Discover it by your own.
             </p>
           </ScrollReveal>
         </div>
