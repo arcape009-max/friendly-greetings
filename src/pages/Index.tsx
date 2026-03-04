@@ -119,6 +119,83 @@ const Index = () => {
         </ScrollReveal>
       </section>
 
+      {/* ─── GUEST FEEDBACK ─── */}
+      <section className="py-32 md:py-48 px-6">
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <p className="font-editorial text-xs tracking-[0.4em] text-muted-foreground mb-6 text-center">
+              What Travelers Say
+            </p>
+            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-20">
+              GUEST FEEDBACK
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                name: "Sarah M.",
+                location: "London, UK",
+                stars: 5,
+                quote:
+                  "Watching a jaguar emerge from the undergrowth ten metres away rewired something in me. I came home a different person — calmer, braver, more grateful. This wasn't a tour; it was a turning point in my life.",
+              },
+              {
+                name: "David K.",
+                location: "Toronto, Canada",
+                stars: 5,
+                quote:
+                  "Antonio from the local community walked us through his village, explained every medicinal plant, and cooked us a meal with ingredients he'd just harvested. His warmth and knowledge made this the most meaningful travel experience I've ever had.",
+              },
+              {
+                name: "Lucía R.",
+                location: "Madrid, Spain",
+                stars: 5,
+                quote:
+                  "The local food alone was worth the trip — fresh river fish, cassava bread, fruits I'd never even heard of. And then a pod of pink dolphins surfaced right beside our canoe. I cried. Honestly, I still can't believe it was real.",
+              },
+            ].map((t, i) => (
+              <ScrollReveal key={i} delay={i * 0.15}>
+                <div className="flex flex-col items-center text-center">
+                  {/* Avatar initial */}
+                  <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center mb-5">
+                    <span className="font-impact text-xl text-accent-foreground">
+                      {t.name.charAt(0)}
+                    </span>
+                  </div>
+
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: t.stars }).map((_, s) => (
+                      <svg
+                        key={s}
+                        className="w-4 h-4 text-gold fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.28l-4.77 2.51.91-5.33L2.27 6.69l5.34-.78L10 1z" />
+                      </svg>
+                    ))}
+                  </div>
+
+                  {/* Quote */}
+                  <p className="font-body text-sm leading-relaxed text-foreground/70 mb-6 italic">
+                    "{t.quote}"
+                  </p>
+
+                  {/* Name & location */}
+                  <p className="font-editorial text-xs tracking-[0.2em] text-foreground">
+                    {t.name}
+                  </p>
+                  <p className="font-body text-xs text-muted-foreground mt-1">
+                    {t.location}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── CREW CTA ─── */}
       <section className="section-dark py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
