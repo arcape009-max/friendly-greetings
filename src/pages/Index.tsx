@@ -181,7 +181,7 @@ const Index = () => {
               In Their Words
             </p>
             <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-16 text-section-green-foreground">
-              STORIES FROM THE WILD
+              WHAT OUR GUESTS SAY
             </h2>
           </ScrollReveal>
 
