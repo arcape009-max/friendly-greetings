@@ -50,6 +50,8 @@ export default {
         "section-dark": "hsl(var(--section-dark))",
         "section-dark-foreground": "hsl(var(--section-dark-foreground))",
         gold: "hsl(var(--gold))",
+        "section-green": "hsl(var(--section-green))",
+        "section-green-foreground": "hsl(var(--section-green-foreground))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

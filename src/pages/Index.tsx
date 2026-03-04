@@ -14,6 +14,9 @@ import tThatchedSunset from "@/assets/testimonial-thatched-sunset.jpg";
 import tHorses from "@/assets/testimonial-horses.jpg";
 import tCanopy from "@/assets/testimonial-canopy.jpg";
 import tHorses2 from "@/assets/testimonial-horses-2.jpg";
+import tDeer from "@/assets/testimonial-deer.jpg";
+import tLagoon from "@/assets/testimonial-lagoon.jpg";
+import tCapybara from "@/assets/testimonial-capybara.jpg";
 
 const Index = () => {
   return (
@@ -170,13 +173,13 @@ const Index = () => {
       </section>
 
       {/* ─── GUEST FEEDBACK ─── */}
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-24 md:py-32 px-6 bg-section-green">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <p className="font-editorial text-xs tracking-[0.4em] text-muted-foreground mb-6 text-center">
+            <p className="font-editorial text-xs tracking-[0.4em] text-section-green-foreground/50 mb-6 text-center">
               What Travelers Say
             </p>
-            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-16">
+            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-16 text-section-green-foreground">
               GUEST FEEDBACK
             </h2>
           </ScrollReveal>
@@ -188,7 +191,7 @@ const Index = () => {
                 location: "London, UK",
                 stars: 5,
                 tags: ["Jaguar Encounter", "Life-Changing"],
-                photos: [tKayakSunset, tThatchedSunset],
+                photos: [tKayakSunset, tThatchedSunset, tDeer],
                 quote:
                   "Watching a jaguar emerge from the undergrowth ten metres away rewired something in me. I came home a different person — calmer, braver, more grateful. This wasn't a tour; it was a turning point in my life.",
               },
@@ -197,7 +200,7 @@ const Index = () => {
                 location: "Toronto, Canada",
                 stars: 5,
                 tags: ["Local Guide", "Cultural Immersion"],
-                photos: [tHorses, tCanopy, tHorses2],
+                photos: [tHorses, tLagoon, tCanopy],
                 quote:
                   "Antonio from the local community walked us through his village, explained every medicinal plant, and cooked us a meal with ingredients he'd just harvested. His warmth and knowledge made this the most meaningful travel experience I've ever had.",
               },
@@ -206,7 +209,7 @@ const Index = () => {
                 location: "Madrid, Spain",
                 stars: 5,
                 tags: ["Pink Dolphins", "Local Cuisine", "River Life"],
-                photos: [tKayakPaddle, tKayakSunset, tThatchedSunset],
+                photos: [tKayakPaddle, tCapybara, tHorses2],
                 quote:
                   "The local food alone was worth the trip — fresh river fish, cassava bread, fruits I'd never even heard of. And then a pod of pink dolphins surfaced right beside our canoe. I cried. Honestly, I still can't believe it was real.",
               },
