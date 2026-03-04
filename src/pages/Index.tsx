@@ -5,8 +5,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import heroHome from "@/assets/hero-home.jpg";
 import destAmazonas from "@/assets/dest-amazonas.jpg";
-import destAntarctica from "@/assets/dest-antarctica.jpg";
-import destSafari from "@/assets/dest-safari.jpg";
+import destLlanos from "@/assets/dest-llanos.jpg";
+import destNuqui from "@/assets/dest-nuqui.jpg";
 
 const Index = () => {
   return (
@@ -82,14 +82,14 @@ const Index = () => {
         <ScrollReveal direction="right" className="px-6 md:px-16 flex justify-end">
           <div className="relative w-full md:w-[85%] aspect-[16/9] overflow-hidden">
             <img
-              src={destAntarctica}
-              alt="Antarctic icebergs"
+              src={destLlanos}
+              alt="Jaguar in Colombian Llanos Orientales"
               className="w-full h-full object-cover" />
 
             <div className="hero-overlay absolute inset-0 opacity-40" />
             <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-right">
               <h2 className="font-impact text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] text-primary-foreground">
-                Antarctica
+                Llanos Orientales
               </h2>
               <p className="font-editorial text-xs text-primary-foreground/70 mt-3">
                 Coming soon
@@ -102,14 +102,14 @@ const Index = () => {
         <ScrollReveal direction="left" className="px-6 md:px-16">
           <div className="relative w-full md:w-[85%] aspect-[16/9] overflow-hidden">
             <img
-              src={destSafari}
-              alt="African safari at sunset"
+              src={destNuqui}
+              alt="Humpback whale breaching near Nuquí Colombia"
               className="w-full h-full object-cover" />
 
             <div className="hero-overlay absolute inset-0 opacity-40" />
             <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12">
               <h2 className="font-impact text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] text-primary-foreground">
-                Safari
+                Nuquí
               </h2>
               <p className="font-editorial text-xs text-primary-foreground/70 mt-3">
                 Coming soon
