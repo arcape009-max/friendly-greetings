@@ -247,6 +247,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ─── BEST MOMENTS ─── */}
+      <BestMoments />
+
       {/* ─── EXTREME NEXT CTA ─── */}
       <section className="section-dark py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
