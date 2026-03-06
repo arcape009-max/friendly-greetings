@@ -4,6 +4,7 @@ import { Mail, Phone, ShieldCheck, CreditCard, Compass, Heart, Users, BookOpen }
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCard from "@/components/TestimonialCard";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/Navbar";
 import heroHome from "@/assets/hero-home.jpg";
 import destAmazonas from "@/assets/dest-amazonas.jpg";
 import destLlanos from "@/assets/dest-llanos.jpg";
