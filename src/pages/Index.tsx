@@ -354,7 +354,7 @@ const Index = () => {
                   value={`faq-${i}`}
                   className="border-none"
                 >
-                  <AccordionTrigger className="font-body text-xs md:text-sm text-foreground/60 hover:text-foreground/90 hover:no-underline py-5 font-normal">
+                  <AccordionTrigger className="font-body text-xs md:text-sm text-foreground/60 hover:text-foreground/90 hover:no-underline py-5 font-normal text-left">
                     {item.q}
                   </AccordionTrigger>
                   <AccordionContent className="font-body text-xs text-foreground/40 leading-relaxed pb-5">
