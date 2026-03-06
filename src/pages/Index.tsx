@@ -4,6 +4,7 @@ import { Mail, Phone, ShieldCheck, CreditCard, Compass, Heart, Users, BookOpen }
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCard from "@/components/TestimonialCard";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/Navbar";
 import heroHome from "@/assets/hero-home.jpg";
 import destAmazonas from "@/assets/dest-amazonas.jpg";
 import destLlanos from "@/assets/dest-llanos.jpg";
@@ -22,8 +23,9 @@ import tCattle from "@/assets/testimonial-cattle.jpg";
 const Index = () => {
   return (
     <div className="bg-background text-foreground overflow-x-hidden">
+      <Navbar />
       {/* ─── HERO ─── */}
-      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <img
           src={heroHome}
           alt="Amazon rainforest canopy at golden hour"
@@ -109,7 +111,7 @@ const Index = () => {
       </section>
 
       {/* ─── DESTINATIONS ─── */}
-      <section className="pb-32 md:pb-48 space-y-16 md:space-y-24">
+      <section id="destinations" className="pb-32 md:pb-48 space-y-16 md:space-y-24">
         {/* Amazonas - links to /amazonas */}
         <ScrollReveal direction="left" className="px-6 md:px-16">
           <Link to="/amazonas" className="group block relative">
@@ -266,7 +268,7 @@ const Index = () => {
       </section>
 
       {/* ─── OUR STORY ─── */}
-      <section className="section-dark py-32 md:py-48 px-6">
+      <section id="our-story" className="section-dark py-32 md:py-48 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] mb-10 opacity-60">
@@ -285,7 +287,7 @@ const Index = () => {
       </section>
 
       {/* ─── TRUST & INFO ─── */}
-      <section className="py-16 md:py-20 px-6 border-t border-border/15">
+      <section id="partners" className="py-16 md:py-20 px-6 border-t border-border/15">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
             {/* Quick Links */}
