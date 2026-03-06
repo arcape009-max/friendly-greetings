@@ -4,6 +4,7 @@ import { Mail, Phone, ShieldCheck, CreditCard, Compass, Heart, Users, BookOpen }
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCard from "@/components/TestimonialCard";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Navbar from "@/components/Navbar";
 import BestMoments from "@/components/BestMoments";
@@ -189,8 +190,8 @@ const Index = () => {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
+          {(() => {
+            const testimonials = [
               {
                 name: "Sarah M.",
                 location: "London, UK",
@@ -218,12 +219,37 @@ const Index = () => {
                 quote:
                   "The local food alone was worth the trip — fresh river fish, cassava bread, fruits I'd never even heard of. And then a pod of pink dolphins surfaced right beside our canoe. I cried. Honestly, I still can't believe it was real.",
               },
-            ].map((t, i) => (
-              <ScrollReveal key={i} delay={i * 0.12}>
-                <TestimonialCard {...t} />
-              </ScrollReveal>
-            ))}
-          </div>
+            ];
+            return (
+              <>
+                {/* Desktop: grid */}
+                <div className="hidden md:grid md:grid-cols-3 gap-6">
+                  {testimonials.map((t, i) => (
+                    <ScrollReveal key={i} delay={i * 0.12}>
+                      <TestimonialCard {...t} />
+                    </ScrollReveal>
+                  ))}
+                </div>
+
+                {/* Mobile: carousel */}
+                <div className="md:hidden">
+                  <Carousel opts={{ align: "start", loop: true }} className="w-full">
+                    <CarouselContent className="-ml-3">
+                      {testimonials.map((t, i) => (
+                        <CarouselItem key={i} className="pl-3 basis-[85%]">
+                          <TestimonialCard {...t} />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <div className="flex justify-center gap-2 mt-6">
+                      <CarouselPrevious className="static translate-y-0 h-8 w-8 border-section-green-foreground/20 text-section-green-foreground/60 hover:bg-section-green-foreground/10" />
+                      <CarouselNext className="static translate-y-0 h-8 w-8 border-section-green-foreground/20 text-section-green-foreground/60 hover:bg-section-green-foreground/10" />
+                    </div>
+                  </Carousel>
+                </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 
