@@ -4,6 +4,7 @@ import { Mail, Phone, ShieldCheck, CreditCard, Compass, Heart, Users, BookOpen }
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
 import TestimonialCard from "@/components/TestimonialCard";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Navbar from "@/components/Navbar";
 import BestMoments from "@/components/BestMoments";
