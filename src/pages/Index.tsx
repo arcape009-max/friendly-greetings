@@ -292,7 +292,7 @@ const Index = () => {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="section-dark py-24 md:py-32 px-6">
+      <section className="bg-background text-foreground py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] opacity-40 mb-6 text-center">
