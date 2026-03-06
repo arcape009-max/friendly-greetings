@@ -290,6 +290,69 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ─── FAQ ─── */}
+      <section className="section-dark py-24 md:py-32 px-6">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <p className="font-editorial text-xs tracking-[0.4em] opacity-40 mb-6 text-center">
+              Common Questions
+            </p>
+            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-16">
+              FREQUENTLY ASKED QUESTIONS
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.15}>
+            <Accordion type="single" collapsible className="space-y-3">
+              {[
+                {
+                  q: "How do I reserve an experience?",
+                  a: "Simply browse our destinations, choose your preferred experience, and click 'Book Now.' You'll be guided through a quick reservation process. If you'd like personalised help, you can also schedule a private call with our team.",
+                },
+                {
+                  q: "How do I know my reservation is secure and guaranteed?",
+                  a: "All payments are processed through encrypted, PCI-compliant channels. Once your booking is confirmed, you'll receive a detailed itinerary and confirmation email. We also offer travel insurance options for complete peace of mind.",
+                },
+                {
+                  q: "Are there any prerequisites before joining an experience?",
+                  a: "Most of our experiences require a reasonable level of fitness and a spirit of adventure. Specific requirements vary by destination and difficulty level — each listing includes detailed preparation guidelines. Our team is always available to help you get ready.",
+                },
+                {
+                  q: "Can I schedule a private call to learn more?",
+                  a: "Absolutely. We encourage it. Book a private call with one of our expedition specialists to discuss your interests, ask questions, and co-create the perfect journey tailored to you.",
+                },
+              ].map((item, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="border-border/15 px-1"
+                >
+                  <AccordionTrigger className="font-body text-sm md:text-base text-foreground/80 hover:text-foreground hover:no-underline py-5">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="font-body text-sm text-foreground/50 leading-relaxed">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.3}>
+            <div className="mt-14 text-center">
+              <a
+                href="https://wa.me/447411997085?text=Hi%20IMMERSA%2C%20I'd%20like%20to%20book%20a%20private%20call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-premium-light inline-block"
+              >
+                Book a Private Call
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ─── TRUST & INFO ─── */}
       <section id="partners" className="py-16 md:py-20 px-6 border-t border-border/15">
         <div className="max-w-5xl mx-auto">
