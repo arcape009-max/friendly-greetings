@@ -292,19 +292,19 @@ const Index = () => {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="bg-background text-foreground py-24 md:py-32 px-6">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-background text-foreground py-20 md:py-28 px-6">
+        <div className="max-w-2xl mx-auto">
           <ScrollReveal>
-            <p className="font-editorial text-xs tracking-[0.4em] opacity-40 mb-6 text-center">
-              Common Questions
+            <p className="font-editorial text-[0.65rem] tracking-[0.5em] text-foreground/30 mb-4 text-center uppercase">
+              Questions
             </p>
-            <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] text-center mb-16">
+            <h2 className="font-impact text-lg md:text-xl tracking-wide text-center mb-14 text-foreground/70">
               FREQUENTLY ASKED QUESTIONS
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.15}>
-            <Accordion type="single" collapsible className="space-y-3">
+            <Accordion type="single" collapsible className="divide-y divide-border/10">
               {[
                 {
                   q: "How do I reserve an experience?",
@@ -326,12 +326,12 @@ const Index = () => {
                 <AccordionItem
                   key={i}
                   value={`faq-${i}`}
-                  className="border-border/15 px-1"
+                  className="border-none"
                 >
-                  <AccordionTrigger className="font-body text-sm md:text-base text-foreground/80 hover:text-foreground hover:no-underline py-5">
+                  <AccordionTrigger className="font-body text-xs md:text-sm text-foreground/60 hover:text-foreground/90 hover:no-underline py-5 font-normal">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="font-body text-sm text-foreground/50 leading-relaxed">
+                  <AccordionContent className="font-body text-xs text-foreground/40 leading-relaxed pb-5">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
