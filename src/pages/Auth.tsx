@@ -24,11 +24,11 @@ const Auth = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!destination) {
-      toast.error("Selecciona un destino");
+      toast.error("Select a destination");
       return;
     }
     if (!dateRange.from || !dateRange.to) {
-      toast.error("Selecciona un rango de fechas");
+      toast.error("Select a date range");
       return;
     }
     setSubmitting(true);
@@ -43,7 +43,7 @@ const Auth = () => {
       });
 
     if (error) {
-      toast.error("Algo salió mal. Intenta de nuevo.");
+      toast.error("Something went wrong. Please try again.");
       setSubmitting(false);
       return;
     }
@@ -72,20 +72,20 @@ const Auth = () => {
         >
           <CheckCircle2 size={48} className="mx-auto text-white/60 mb-6" />
           <h1 className="font-impact text-[clamp(2rem,6vw,3rem)] mb-3">
-            ¡RECIBIDO!
+            RECEIVED!
           </h1>
           <p className="font-body text-sm text-white/50 mb-2">
-            Gracias, <span className="text-white">{name}</span>. Hemos recibido tu solicitud.
+            Thanks, <span className="text-white">{name}</span>. We've received your request.
           </p>
           <p className="font-body text-sm text-white/40 mb-8">
-            Nuestro equipo se pondrá en contacto contigo pronto para coordinar tu aventura a <span className="text-white/70">{destination}</span>.
+            Our team will reach out soon to coordinate your adventure to <span className="text-white/70">{destination}</span>.
           </p>
           <Link
             to="/"
             className="inline-flex items-center gap-2 font-editorial text-[0.65rem] tracking-[0.3em] text-white/50 hover:text-white transition-colors"
           >
             <ArrowLeft size={14} />
-            VOLVER AL INICIO
+            BACK TO HOME
           </Link>
         </motion.div>
       </div>
@@ -112,7 +112,7 @@ const Auth = () => {
           JOIN THE CREW
         </h1>
         <p className="font-editorial text-xs tracking-[0.3em] text-white/50 mb-12">
-          Cuéntanos a dónde quieres ir
+          Tell us where you want to go
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -132,7 +132,7 @@ const Auth = () => {
 
           <div>
             <label className="font-editorial text-[0.55rem] tracking-[0.2em] text-white/40 mb-2 block">
-              TELÉFONO
+              PHONE
             </label>
             <input
               type="tel"
@@ -169,7 +169,7 @@ const Auth = () => {
 
           <div>
             <label className="font-editorial text-[0.55rem] tracking-[0.2em] text-white/40 mb-2 block">
-              FECHAS
+              DATES
             </label>
             <Popover>
               <PopoverTrigger asChild>
@@ -190,7 +190,7 @@ const Auth = () => {
                       <span>{format(dateRange.from, "dd MMM yyyy")}</span>
                     )
                   ) : (
-                    <span>Selecciona tus fechas</span>
+                    <span>Select your dates</span>
                   )}
                   <CalendarIcon size={16} className="text-white/30" />
                 </button>
@@ -221,11 +221,11 @@ const Auth = () => {
             disabled={submitting}
             className="w-full btn-premium-light disabled:opacity-40 mt-4"
           >
-            {submitting ? "Enviando..." : "Enviar solicitud"}
+            {submitting ? "Sending..." : "Submit request"}
           </button>
 
           <p className="font-body text-[0.65rem] text-white/25 text-center mt-4">
-            Nos comunicaremos contigo para confirmar disponibilidad y detalles.
+            We'll reach out to confirm availability and details.
           </p>
         </form>
       </motion.div>
