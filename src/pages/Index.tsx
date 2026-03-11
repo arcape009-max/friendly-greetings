@@ -76,12 +76,12 @@ const Index = () => {
           <ScrollReveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10 md:gap-y-0">
               {[
-                { title: "Beyond Agencies", sub: "Raw expeditions, not packaged tours" },
-                { title: "Local Experts", sub: "Guides born in the territory" },
-                { title: "Co-Created", sub: "Tailor-made with bilingual locals" },
-                { title: "60%+ Local Impact", sub: "Trip price benefits communities" },
-              ].map((item, i) => (
-                <div key={i} className="text-center">
+              { title: "Beyond Agencies", sub: "Raw expeditions, not packaged tours" },
+              { title: "Local Experts", sub: "Guides born in the territory" },
+              { title: "Co-Created", sub: "Tailor-made with bilingual locals" },
+              { title: "60%+ Local Impact", sub: "Trip price benefits communities" }].
+              map((item, i) =>
+              <div key={i} className="text-center">
                   <div className="w-px h-8 bg-accent/40 mx-auto mb-5" />
                   <h3 className="font-impact text-sm md:text-base tracking-wide mb-2">
                     {item.title}
@@ -90,7 +90,7 @@ const Index = () => {
                     {item.sub}
                   </p>
                 </div>
-              ))}
+              )}
             </div>
           </ScrollReveal>
         </div>
@@ -192,54 +192,54 @@ const Index = () => {
 
           {(() => {
             const testimonials = [
-              {
-                name: "Sarah M.",
-                location: "London, UK",
-                stars: 5,
-                tags: ["Jaguar Encounter", "Life-Changing"],
-                photos: [tCattle, tThatchedSunset, tDeer],
-                quote:
-                  "Watching a jaguar emerge from the undergrowth ten metres away rewired something in me. I came home a different person — calmer, braver, more grateful. This wasn't a tour; it was a turning point in my life.",
-              },
-              {
-                name: "David K.",
-                location: "Toronto, Canada",
-                stars: 5,
-                tags: ["Local Guide", "Cultural Immersion"],
-                photos: [tHorses, tLagoon, tCanopy],
-                quote:
-                  "Antonio from the local community walked us through his village, explained every medicinal plant, and cooked us a meal with ingredients he'd just harvested. His warmth and knowledge made this the most meaningful travel experience I've ever had.",
-              },
-              {
-                name: "Lucía R.",
-                location: "Madrid, Spain",
-                stars: 5,
-                tags: ["Pink Dolphins", "Local Cuisine", "River Life"],
-                photos: [tKayakPaddle, tCapybara, tHorses2],
-                quote:
-                  "The local food alone was worth the trip — fresh river fish, cassava bread, fruits I'd never even heard of. And then a pod of pink dolphins surfaced right beside our canoe. I cried. Honestly, I still can't believe it was real.",
-              },
-            ];
+            {
+              name: "Sarah M.",
+              location: "London, UK",
+              stars: 5,
+              tags: ["Jaguar Encounter", "Life-Changing"],
+              photos: [tCattle, tThatchedSunset, tDeer],
+              quote:
+              "Watching a jaguar emerge from the undergrowth ten metres away rewired something in me. I came home a different person — calmer, braver, more grateful. This wasn't a tour; it was a turning point in my life."
+            },
+            {
+              name: "David K.",
+              location: "Toronto, Canada",
+              stars: 5,
+              tags: ["Local Guide", "Cultural Immersion"],
+              photos: [tHorses, tLagoon, tCanopy],
+              quote:
+              "Antonio from the local community walked us through his village, explained every medicinal plant, and cooked us a meal with ingredients he'd just harvested. His warmth and knowledge made this the most meaningful travel experience I've ever had."
+            },
+            {
+              name: "Lucía R.",
+              location: "Madrid, Spain",
+              stars: 5,
+              tags: ["Pink Dolphins", "Local Cuisine", "River Life"],
+              photos: [tKayakPaddle, tCapybara, tHorses2],
+              quote:
+              "The local food alone was worth the trip — fresh river fish, cassava bread, fruits I'd never even heard of. And then a pod of pink dolphins surfaced right beside our canoe. I cried. Honestly, I still can't believe it was real."
+            }];
+
             return (
               <>
                 {/* Desktop: grid */}
                 <div className="hidden md:grid md:grid-cols-3 gap-6">
-                  {testimonials.map((t, i) => (
-                    <ScrollReveal key={i} delay={i * 0.12}>
+                  {testimonials.map((t, i) =>
+                  <ScrollReveal key={i} delay={i * 0.12}>
                       <TestimonialCard {...t} />
                     </ScrollReveal>
-                  ))}
+                  )}
                 </div>
 
                 {/* Mobile: carousel */}
                 <div className="md:hidden">
                   <Carousel opts={{ align: "start", loop: true }} className="w-full">
                     <CarouselContent className="-ml-3">
-                      {testimonials.map((t, i) => (
-                        <CarouselItem key={i} className="pl-3 basis-[85%]">
+                      {testimonials.map((t, i) =>
+                      <CarouselItem key={i} className="pl-3 basis-[85%]">
                           <TestimonialCard {...t} />
                         </CarouselItem>
-                      ))}
+                      )}
                     </CarouselContent>
                     <div className="flex justify-center gap-2 mt-6">
                       <CarouselPrevious className="static translate-y-0 h-8 w-8 border-section-green-foreground/20 text-section-green-foreground/60 hover:bg-section-green-foreground/10" />
@@ -247,8 +247,8 @@ const Index = () => {
                     </div>
                   </Carousel>
                 </div>
-              </>
-            );
+              </>);
+
           })()}
         </div>
       </section>
@@ -264,8 +264,8 @@ const Index = () => {
               FIND YOUR CREW
             </h2>
             <p className="font-body text-base opacity-60 mb-10 max-w-lg mx-auto">
-              Create a crew, join an existing one, or let AI match you with
-              fellow explorers heading to the same destinations.
+              Send us a range of dates and we will let you know if there are any scheduled expeditions. 
+            
             </p>
             <Link to="/crew" className="btn-premium-light inline-block">
               Join a Crew
@@ -332,28 +332,28 @@ const Index = () => {
           <ScrollReveal delay={0.15}>
             <Accordion type="single" collapsible className="divide-y divide-border/10">
               {[
-                {
-                  q: "How do I reserve an experience?",
-                  a: "Simply browse our destinations, choose your preferred experience, and click 'Book Now.' You'll be guided through a quick reservation process. If you'd like personalised help, you can also schedule a private call with our team.",
-                },
-                {
-                  q: "How do I know my reservation is secure and guaranteed?",
-                  a: "All payments are processed through encrypted, PCI-compliant channels. Once your booking is confirmed, you'll receive a detailed itinerary and confirmation email. We also offer travel insurance options for complete peace of mind.",
-                },
-                {
-                  q: "Are there any prerequisites before joining an experience?",
-                  a: "Most of our experiences require a reasonable level of fitness and a spirit of adventure. Specific requirements vary by destination and difficulty level — each listing includes detailed preparation guidelines. Our team is always available to help you get ready.",
-                },
-                {
-                  q: "Can I schedule a private call to learn more?",
-                  a: "Absolutely. We encourage it. Book a private call with one of our expedition specialists to discuss your interests, ask questions, and co-create the perfect journey tailored to you.",
-                },
-              ].map((item, i) => (
-                <AccordionItem
-                  key={i}
-                  value={`faq-${i}`}
-                  className="border-none"
-                >
+              {
+                q: "How do I reserve an experience?",
+                a: "Simply browse our destinations, choose your preferred experience, and click 'Book Now.' You'll be guided through a quick reservation process. If you'd like personalised help, you can also schedule a private call with our team."
+              },
+              {
+                q: "How do I know my reservation is secure and guaranteed?",
+                a: "All payments are processed through encrypted, PCI-compliant channels. Once your booking is confirmed, you'll receive a detailed itinerary and confirmation email. We also offer travel insurance options for complete peace of mind."
+              },
+              {
+                q: "Are there any prerequisites before joining an experience?",
+                a: "Most of our experiences require a reasonable level of fitness and a spirit of adventure. Specific requirements vary by destination and difficulty level — each listing includes detailed preparation guidelines. Our team is always available to help you get ready."
+              },
+              {
+                q: "Can I schedule a private call to learn more?",
+                a: "Absolutely. We encourage it. Book a private call with one of our expedition specialists to discuss your interests, ask questions, and co-create the perfect journey tailored to you."
+              }].
+              map((item, i) =>
+              <AccordionItem
+                key={i}
+                value={`faq-${i}`}
+                className="border-none">
+                
                   <AccordionTrigger className="font-body text-xs md:text-sm text-foreground/60 hover:text-foreground/90 hover:no-underline py-5 font-normal text-left">
                     {item.q}
                   </AccordionTrigger>
@@ -361,7 +361,7 @@ const Index = () => {
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
-              ))}
+              )}
             </Accordion>
           </ScrollReveal>
 
@@ -371,8 +371,8 @@ const Index = () => {
                 href="https://wa.me/447411997085?text=Hi%20IMMERSA%2C%20I'd%20like%20to%20book%20a%20private%20call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-premium-light inline-block"
-              >
+                className="btn-premium-light inline-block">
+                
                 Book a Private Call
               </a>
             </div>
@@ -389,18 +389,18 @@ const Index = () => {
               <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Navigate</h4>
               <ul className="space-y-3">
                 {[
-                  { icon: BookOpen, label: "How to Book" },
-                  { icon: Heart, label: "Our Promise" },
-                  { icon: Users, label: "About Us" },
-                  { icon: Compass, label: "Our Guarantees" },
-                ].map((item) => (
-                  <li key={item.label}>
+                { icon: BookOpen, label: "How to Book" },
+                { icon: Heart, label: "Our Promise" },
+                { icon: Users, label: "About Us" },
+                { icon: Compass, label: "Our Guarantees" }].
+                map((item) =>
+                <li key={item.label}>
                     <a href="#" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors group">
                       <item.icon size={14} className="text-accent group-hover:text-foreground transition-colors" />
                       {item.label}
                     </a>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
 
