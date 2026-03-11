@@ -112,7 +112,7 @@ const Auth = () => {
           JOIN THE CREW
         </h1>
         <p className="font-editorial text-xs tracking-[0.3em] text-white/50 mb-12">
-          Cuéntanos a dónde quieres ir
+          Tell us where you want to go
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
