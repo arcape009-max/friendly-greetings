@@ -24,7 +24,7 @@ const Auth = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!destination) {
-      toast.error("Selecciona un destino");
+      toast.error("Select a destination");
       return;
     }
     if (!dateRange.from || !dateRange.to) {
