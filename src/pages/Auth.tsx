@@ -85,7 +85,7 @@ const Auth = () => {
             className="inline-flex items-center gap-2 font-editorial text-[0.65rem] tracking-[0.3em] text-white/50 hover:text-white transition-colors"
           >
             <ArrowLeft size={14} />
-            VOLVER AL INICIO
+            BACK TO HOME
           </Link>
         </motion.div>
       </div>
