@@ -28,7 +28,7 @@ const Auth = () => {
       return;
     }
     if (!dateRange.from || !dateRange.to) {
-      toast.error("Selecciona un rango de fechas");
+      toast.error("Select a date range");
       return;
     }
     setSubmitting(true);
