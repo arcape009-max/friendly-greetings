@@ -190,7 +190,7 @@ const Auth = () => {
                       <span>{format(dateRange.from, "dd MMM yyyy")}</span>
                     )
                   ) : (
-                    <span>Selecciona tus fechas</span>
+                    <span>Select your dates</span>
                   )}
                   <CalendarIcon size={16} className="text-white/30" />
                 </button>
