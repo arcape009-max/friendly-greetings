@@ -225,7 +225,7 @@ const Auth = () => {
           </button>
 
           <p className="font-body text-[0.65rem] text-white/25 text-center mt-4">
-            Nos comunicaremos contigo para confirmar disponibilidad y detalles.
+            We'll reach out to confirm availability and details.
           </p>
         </form>
       </motion.div>
