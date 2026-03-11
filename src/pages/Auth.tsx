@@ -43,7 +43,7 @@ const Auth = () => {
       });
 
     if (error) {
-      toast.error("Algo salió mal. Intenta de nuevo.");
+      toast.error("Something went wrong. Please try again.");
       setSubmitting(false);
       return;
     }
