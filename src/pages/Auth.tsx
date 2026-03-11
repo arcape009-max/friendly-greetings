@@ -221,7 +221,7 @@ const Auth = () => {
             disabled={submitting}
             className="w-full btn-premium-light disabled:opacity-40 mt-4"
           >
-            {submitting ? "Enviando..." : "Enviar solicitud"}
+            {submitting ? "Sending..." : "Submit request"}
           </button>
 
           <p className="font-body text-[0.65rem] text-white/25 text-center mt-4">
