@@ -132,7 +132,7 @@ const Auth = () => {
 
           <div>
             <label className="font-editorial text-[0.55rem] tracking-[0.2em] text-white/40 mb-2 block">
-              TELÉFONO
+              PHONE
             </label>
             <input
               type="tel"
