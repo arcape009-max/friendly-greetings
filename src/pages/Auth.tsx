@@ -122,7 +122,7 @@ const Auth = () => {
             </label>
             <input
               type="text"
-              placeholder="Tu nombre completo"
+              placeholder="your full name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
