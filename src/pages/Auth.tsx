@@ -146,7 +146,7 @@ const Auth = () => {
 
           <div>
             <label className="font-editorial text-[0.55rem] tracking-[0.2em] text-white/40 mb-2 block">
-              DESTINO
+              DESTINATION
             </label>
             <div className="grid grid-cols-3 gap-3">
               {destinations.map((d) => (
