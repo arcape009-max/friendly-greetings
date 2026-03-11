@@ -72,13 +72,13 @@ const Auth = () => {
         >
           <CheckCircle2 size={48} className="mx-auto text-white/60 mb-6" />
           <h1 className="font-impact text-[clamp(2rem,6vw,3rem)] mb-3">
-            ¡RECIBIDO!
+            RECEIVED!
           </h1>
           <p className="font-body text-sm text-white/50 mb-2">
-            Gracias, <span className="text-white">{name}</span>. Hemos recibido tu solicitud.
+            Thanks, <span className="text-white">{name}</span>. We've received your request.
           </p>
           <p className="font-body text-sm text-white/40 mb-8">
-            Nuestro equipo se pondrá en contacto contigo pronto para coordinar tu aventura a <span className="text-white/70">{destination}</span>.
+            Our team will reach out soon to coordinate your adventure to <span className="text-white/70">{destination}</span>.
           </p>
           <Link
             to="/"
