@@ -300,19 +300,88 @@ const Index = () => {
 
       {/* ─── OUR STORY ─── */}
       <section id="our-story" className="section-dark py-32 md:py-48 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
           <ScrollReveal>
-            <p className="font-editorial text-xs tracking-[0.4em] mb-10 opacity-60">
+            <p className="font-editorial text-xs tracking-[0.4em] mb-10 opacity-60 text-center">
               Our Story
             </p>
           </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="font-body text-lg md:text-xl leading-relaxed opacity-80">
-              IMMERSA was born from a University College London (UCL) project
-              with a singular vision: to connect passionate travelers with the
-              most breathtaking, off-the-grid locations on Earth. This is where
-              comfort disappears and growth begins.
-            </p>
+          
+          {/* Story Content */}
+          <ScrollReveal delay={0.15}>
+            <div className="text-center mb-16">
+              <p className="font-body text-lg md:text-xl leading-relaxed opacity-80 mb-8">
+                IMMERSA was born from a University College London (UCL) project with a singular vision: to connect passionate travelers with the most breathtaking, off-the-grid locations on Earth.
+              </p>
+              <p className="font-body text-lg md:text-xl leading-relaxed opacity-80 mb-8">
+                We believe that the most transformative experiences happen outside of our comfort zones. IMMERSA is designed for travelers seeking more than just destinations — it is for those looking for challenge, discovery, and personal growth.
+              </p>
+              <p className="font-impact text-xl md:text-2xl tracking-wide text-accent">
+                This is where comfort disappears and growth begins.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Founders */}
+          <ScrollReveal delay={0.3}>
+            <div className="mt-20">
+              <p className="font-editorial text-xs tracking-[0.4em] mb-12 opacity-50 text-center">
+                Meet the Founders
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+                {/* Jessica */}
+                <div className="text-center">
+                  <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-6 rounded-full overflow-hidden bg-muted/20">
+                    <img 
+                      src={founderJessica} 
+                      alt="Jessica Valentina Mojica Muñoz" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-impact text-lg md:text-xl mb-3">
+                    Jessica Valentina Mojica Muñoz
+                  </h3>
+                  <p className="font-body text-sm opacity-60 mb-4 leading-relaxed max-w-sm mx-auto">
+                    Project & Change Consultant passionate about innovation, impact, and transformative experiences. Jessica focuses on building meaningful projects that connect people with unique opportunities for growth and exploration.
+                  </p>
+                  <a 
+                    href="https://www.linkedin.com/in/jessica-valentina-mojica-mu%C3%B1oz-32426b1b1/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-editorial text-xs tracking-wider text-accent hover:text-accent/80 transition-colors"
+                  >
+                    LinkedIn →
+                  </a>
+                </div>
+
+                {/* Kevin */}
+                <div className="text-center">
+                  <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-6 rounded-full overflow-hidden bg-muted/20">
+                    <img 
+                      src={founderKevin} 
+                      alt="Kevin Steven Mojica" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-impact text-lg md:text-xl mb-3">
+                    Kevin Steven Mojica
+                  </h3>
+                  <p className="font-body text-sm opacity-60 mb-4 leading-relaxed max-w-sm mx-auto">
+                    Master in Public Administration with a specialization in Public Policy. Kevin brings a strategic and governance perspective to IMMERSA, helping shape initiatives that combine adventure, sustainability, and social impact.
+                  </p>
+                  <a 
+                    href="https://www.linkedin.com/in/kevinmojica/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-editorial text-xs tracking-wider text-accent hover:text-accent/80 transition-colors"
+                  >
+                    LinkedIn →
+                  </a>
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
