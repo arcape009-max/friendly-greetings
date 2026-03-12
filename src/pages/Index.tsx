@@ -139,24 +139,26 @@ const Index = () => {
           </Link>
         </ScrollReveal>
 
-        {/* Antarctica */}
+        {/* Llanos Orientales */}
         <ScrollReveal direction="right" className="px-6 md:px-16 flex justify-end">
-          <div className="relative w-full md:w-[85%] aspect-[16/9] overflow-hidden">
-            <img
-              src={destLlanos}
-              alt="Horses and cattle grazing in the Colombian Llanos Orientales"
-              className="w-full h-full object-cover" />
+          <Link to="/llanos" className="group block relative w-full md:w-[85%]">
+            <div className="relative w-full aspect-[16/9] overflow-hidden">
+              <img
+                src={destLlanos}
+                alt="Horses and cattle grazing in the Colombian Llanos Orientales"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
 
-            <div className="hero-overlay absolute inset-0 opacity-40" />
-            <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-right">
-              <h2 className="font-impact text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] text-primary-foreground">
-                Llanos Orientales
-              </h2>
-              <p className="font-editorial text-xs text-primary-foreground/70 mt-3">
-                Coming soon
-              </p>
+              <div className="hero-overlay absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
+              <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 text-right">
+                <h2 className="font-impact text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] text-primary-foreground">
+                  Llanos Orientales
+                </h2>
+                <p className="font-editorial text-xs text-primary-foreground/70 mt-3">
+                  Coming soon — Explore preview →
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </ScrollReveal>
 
         {/* Safari */}
