@@ -126,16 +126,6 @@ const Activities = () => {
                 <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-12 md:py-20">
                   <div className="flex items-center gap-3 mb-6">
                     <Icon size={20} className="text-[hsl(var(--accent))]" />
-                    <div className="flex gap-2">
-                      {activity.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="font-editorial text-[0.6rem] tracking-[0.2em] px-3 py-1 border border-[hsl(var(--section-dark-foreground)/0.15)] text-[hsl(var(--section-dark-foreground)/0.5)]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
 
                   <h2 className="font-impact text-2xl md:text-4xl mb-6 leading-tight">
