@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-{ label: "Our Story", href: "#our-story" },
-{ label: "Experiences", href: "#destinations" },
-{ label: "Our Partners", href: "#partners" },
-{ label: "Who Are We?", href: "#founders" }];
+  { label: "Experiences", href: "#destinations" },
+  { label: "Our Activities", href: "/activities", isPage: true },
+  { label: "Who Are We?", href: "#founders" },
+];
 
 
 const Navbar = () => {
@@ -20,9 +20,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const location = useLocation();
+  
   const handleAnchor = (href: string) => {
     setMobileOpen(false);
     if (href.startsWith("#")) {
+      if (location.pathname !== "/") {
+        window.location.href = "/" + href;
+        return;
+      }
       const el = document.querySelector(href);
       el?.scrollIntoView({ behavior: "smooth" });
     }
@@ -48,13 +54,21 @@ const Navbar = () => {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) =>
-          <button
-            key={item.label}
-            onClick={() => handleAnchor(item.href)}
-            className="font-editorial text-[0.65rem] tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
-            
-              {item.label}
-            </button>
+            'isPage' in item && item.isPage ? (
+              <Link
+                key={item.label}
+                to={item.href}
+                className="font-editorial text-[0.65rem] tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                {item.label}
+              </Link>
+            ) : (
+              <button
+                key={item.label}
+                onClick={() => handleAnchor(item.href)}
+                className="font-editorial text-[0.65rem] tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                {item.label}
+              </button>
+            )
           )}
           <Link
             to="/auth"
@@ -85,14 +99,23 @@ const Navbar = () => {
           
             <div className="flex flex-col items-center gap-6 py-8">
               {navItems.map((item) =>
-            <button
-              key={item.label}
-              onClick={() => handleAnchor(item.href)}
-              className="font-editorial text-xs tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
-              
-                  {item.label}
-                </button>
-            )}
+                'isPage' in item && item.isPage ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="font-editorial text-xs tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={() => handleAnchor(item.href)}
+                    className="font-editorial text-xs tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                    {item.label}
+                  </button>
+                )
+              )}
               <Link
               to="/auth"
               onClick={() => setMobileOpen(false)}

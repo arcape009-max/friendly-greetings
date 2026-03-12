@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Amazonas from "./pages/Amazonas";
+import Activities from "./pages/Activities";
 import ExtremeNext from "./pages/ExtremeNext";
 import Auth from "./pages/Auth";
 import Crew from "./pages/Crew";
@@ -23,6 +24,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/amazonas" element={<Amazonas />} />
+            <Route path="/activities" element={<Activities />} />
             <Route path="/extreme-next" element={<ExtremeNext />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/crew" element={<Crew />} />
