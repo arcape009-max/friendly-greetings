@@ -48,13 +48,21 @@ const Navbar = () => {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) =>
-          <button
-            key={item.label}
-            onClick={() => handleAnchor(item.href)}
-            className="font-editorial text-[0.65rem] tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
-            
-              {item.label}
-            </button>
+            'isPage' in item && item.isPage ? (
+              <Link
+                key={item.label}
+                to={item.href}
+                className="font-editorial text-[0.65rem] tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                {item.label}
+              </Link>
+            ) : (
+              <button
+                key={item.label}
+                onClick={() => handleAnchor(item.href)}
+                className="font-editorial text-[0.65rem] tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                {item.label}
+              </button>
+            )
           )}
           <Link
             to="/auth"
