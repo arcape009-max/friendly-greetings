@@ -22,6 +22,8 @@ import tDeer from "@/assets/testimonial-deer.jpg";
 import tLagoon from "@/assets/testimonial-lagoon.jpg";
 import tCapybara from "@/assets/testimonial-capybara.jpg";
 import tCattle from "@/assets/testimonial-cattle.jpg";
+import founderJessica from "@/assets/founder-jessica.jpg";
+import founderKevin from "@/assets/founder-kevin.jpg";
 
 const Index = () => {
   return (
