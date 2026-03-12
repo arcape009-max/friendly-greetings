@@ -93,14 +93,23 @@ const Navbar = () => {
           
             <div className="flex flex-col items-center gap-6 py-8">
               {navItems.map((item) =>
-            <button
-              key={item.label}
-              onClick={() => handleAnchor(item.href)}
-              className="font-editorial text-xs tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
-              
-                  {item.label}
-                </button>
-            )}
+                'isPage' in item && item.isPage ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="font-editorial text-xs tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={() => handleAnchor(item.href)}
+                    className="font-editorial text-xs tracking-[0.3em] text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--primary-foreground))] transition-colors">
+                    {item.label}
+                  </button>
+                )
+              )}
               <Link
               to="/auth"
               onClick={() => setMobileOpen(false)}
