@@ -327,7 +327,7 @@ const Index = () => {
 
           {/* Founders */}
           <ScrollReveal delay={0.3}>
-            <div className="mt-20">
+            <div id="founders" className="mt-20">
               <p className="font-editorial text-xs tracking-[0.4em] mb-12 opacity-50 text-center">
                 Meet the Founders
               </p>
