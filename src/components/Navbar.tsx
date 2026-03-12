@@ -20,9 +20,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const location = useLocation();
+  
   const handleAnchor = (href: string) => {
     setMobileOpen(false);
     if (href.startsWith("#")) {
+      if (location.pathname !== "/") {
+        window.location.href = "/" + href;
+        return;
+      }
       const el = document.querySelector(href);
       el?.scrollIntoView({ behavior: "smooth" });
     }

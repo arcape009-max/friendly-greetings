@@ -300,13 +300,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ─── OUR STORY ─── */}
+      {/* ─── WHO ARE WE? ─── */}
       <section id="our-story" className="section-dark py-32 md:py-48 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] mb-10 opacity-60 text-center">
-              Our Story
+              Who Are We?
             </p>
           </ScrollReveal>
           
