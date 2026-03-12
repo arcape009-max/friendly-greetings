@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import Amazonas from "./pages/Amazonas";
+import Activities from "./pages/Activities";
 import ExtremeNext from "./pages/ExtremeNext";
 import Auth from "./pages/Auth";
 import Crew from "./pages/Crew";
