@@ -327,7 +327,7 @@ const Index = () => {
 
           {/* Founders */}
           <ScrollReveal delay={0.3}>
-            <div className="mt-20">
+            <div id="founders" className="mt-20">
               <p className="font-editorial text-xs tracking-[0.4em] mb-12 opacity-50 text-center">
                 Meet the Founders
               </p>
@@ -363,12 +363,12 @@ const Index = () => {
                   <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-6 rounded-full overflow-hidden bg-muted/20">
                     <img 
                       src={founderKevin} 
-                      alt="Kevin Steven Mojica" 
+                      alt="Kevin Steven Mojica Muñoz" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <h3 className="font-impact text-lg md:text-xl mb-3">
-                    Kevin Steven Mojica
+                    Kevin Steven Mojica Muñoz
                   </h3>
                   <p className="font-body text-sm opacity-60 mb-4 leading-relaxed max-w-sm mx-auto">
                     Master in Public Administration with a specialization in Public Policy. Kevin brings a strategic and governance perspective to IMMERSA, helping shape initiatives that combine adventure, sustainability, and social impact.

@@ -6,7 +6,8 @@ import { Menu, X } from "lucide-react";
 const navItems = [
 { label: "Our Story", href: "#our-story" },
 { label: "Experiences", href: "#destinations" },
-{ label: "Our Partners", href: "#partners" }];
+{ label: "Our Partners", href: "#partners" },
+{ label: "Who Are We?", href: "#founders" }];
 
 
 const Navbar = () => {
