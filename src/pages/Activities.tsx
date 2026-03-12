@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Clock, Mountain, Flame, Waves, TreePine, Fish, Moon, Footprints, BookOpen, Compass } from "lucide-react";
+import { Fish, Moon, TreePine, Flame, Waves, Compass } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -19,49 +19,42 @@ const activities = [
     description: "A thrilling fishing experience deep in the river ecosystem. Travelers learn traditional techniques from local guides while fishing for piranhas in the Amazonian waters. It combines adrenaline, local knowledge, and a unique culinary experience.",
     image: actRiver,
     icon: Fish,
-    tags: ["3–4 hours", "Moderate", "Cultural"],
   },
   {
     title: "Montañismo Nocturno",
     description: "A guided nighttime climb where adventurers explore the jungle or mountain terrain under the stars. Equipped with headlamps, participants discover nocturnal wildlife, sounds of the forest, and a completely different perspective of nature.",
     image: actCave,
     icon: Moon,
-    tags: ["4–5 hours", "Challenging", "Adventure"],
   },
   {
     title: "Caminata de Flora y Cultura",
     description: "A guided walk through the surrounding ecosystem where visitors learn about medicinal plants, local flora, and cultural traditions. This activity connects travelers with indigenous knowledge and the environmental richness of the region.",
     image: actExplorer,
     icon: TreePine,
-    tags: ["3 hours", "Easy", "Educational"],
   },
   {
     title: "Fogata de Cuentos",
     description: "An intimate storytelling experience around a campfire. Local guides and community members share legends, myths, and stories of the land while participants enjoy the calm of the night and the warmth of the fire.",
     image: actThatched,
     icon: Flame,
-    tags: ["2 hours", "Easy", "Cultural"],
   },
   {
     title: "Kayak por el Río Asa",
     description: "A peaceful yet adventurous kayak journey through the Asa River. Surrounded by pristine nature, participants paddle through calm waters while observing birds, vegetation, and the unique landscape of the region.",
     image: tKayakSunset,
     icon: Waves,
-    tags: ["3–4 hours", "Moderate", "Nature"],
   },
   {
     title: "Viaje a la Estrella Fluvial de Oriente",
     description: "An expedition to one of Colombia's most extraordinary natural phenomena, where multiple rivers converge. This journey combines exploration, breathtaking landscapes, and the chance to witness a rare geographical wonder.",
     image: actLodge,
     icon: Compass,
-    tags: ["Full day", "Moderate", "Exploration"],
   },
   {
     title: "Nado con Delfines Rosados",
     description: "A once-in-a-lifetime experience where travelers can observe—and in certain areas swim near—the iconic pink river dolphins in their natural habitat, guided responsibly to respect and protect wildlife.",
     image: actPetroglyphs,
     icon: Waves,
-    tags: ["2–3 hours", "Easy", "Wildlife"],
   },
 ];
 
@@ -133,16 +126,6 @@ const Activities = () => {
                 <div className="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-12 md:py-20">
                   <div className="flex items-center gap-3 mb-6">
                     <Icon size={20} className="text-[hsl(var(--accent))]" />
-                    <div className="flex gap-2">
-                      {activity.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="font-editorial text-[0.6rem] tracking-[0.2em] px-3 py-1 border border-[hsl(var(--section-dark-foreground)/0.15)] text-[hsl(var(--section-dark-foreground)/0.5)]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
 
                   <h2 className="font-impact text-2xl md:text-4xl mb-6 leading-tight">
