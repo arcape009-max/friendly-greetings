@@ -15,43 +15,43 @@ import tKayakSunset from "@/assets/testimonial-kayak-sunset.jpg";
 
 const activities = [
   {
-    title: "Pesca de Pirañas",
+    title: "Piranha Fishing",
     description: "A thrilling fishing experience deep in the river ecosystem. Travelers learn traditional techniques from local guides while fishing for piranhas in the Amazonian waters. It combines adrenaline, local knowledge, and a unique culinary experience.",
     image: actRiver,
     icon: Fish,
   },
   {
-    title: "Montañismo Nocturno",
+    title: "Night Mountaineering",
     description: "A guided nighttime climb where adventurers explore the jungle or mountain terrain under the stars. Equipped with headlamps, participants discover nocturnal wildlife, sounds of the forest, and a completely different perspective of nature.",
     image: actCave,
     icon: Moon,
   },
   {
-    title: "Caminata de Flora y Cultura",
+    title: "Flora and Culture Walk",
     description: "A guided walk through the surrounding ecosystem where visitors learn about medicinal plants, local flora, and cultural traditions. This activity connects travelers with indigenous knowledge and the environmental richness of the region.",
     image: actExplorer,
     icon: TreePine,
   },
   {
-    title: "Fogata de Cuentos",
+    title: "Storytelling Bonfire",
     description: "An intimate storytelling experience around a campfire. Local guides and community members share legends, myths, and stories of the land while participants enjoy the calm of the night and the warmth of the fire.",
     image: actThatched,
     icon: Flame,
   },
   {
-    title: "Kayak por el Río Asa",
+    title: "Kayaking the Asa River",
     description: "A peaceful yet adventurous kayak journey through the Asa River. Surrounded by pristine nature, participants paddle through calm waters while observing birds, vegetation, and the unique landscape of the region.",
     image: tKayakSunset,
     icon: Waves,
   },
   {
-    title: "Viaje a la Estrella Fluvial de Oriente",
+    title: "Journey to the River Star of the East",
     description: "An expedition to one of Colombia's most extraordinary natural phenomena, where multiple rivers converge. This journey combines exploration, breathtaking landscapes, and the chance to witness a rare geographical wonder.",
     image: actLodge,
     icon: Compass,
   },
   {
-    title: "Nado con Delfines Rosados",
+    title: "Swimming with Pink Dolphins",
     description: "A once-in-a-lifetime experience where travelers can observe—and in certain areas swim near—the iconic pink river dolphins in their natural habitat, guided responsibly to respect and protect wildlife.",
     image: actPetroglyphs,
     icon: Waves,
