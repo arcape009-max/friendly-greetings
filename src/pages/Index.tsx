@@ -288,7 +288,7 @@ const Index = () => {
           {/* Header */}
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] mb-10 opacity-60 text-center">
-              Who Are We?
+              Who we are?
             </p>
           </ScrollReveal>
           
