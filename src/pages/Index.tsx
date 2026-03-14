@@ -316,7 +316,7 @@ const Index = () => {
           <ScrollReveal delay={0.15}>
             <div className="text-center mb-16">
               <p className="font-body text-lg md:text-xl leading-relaxed opacity-80 mb-8">
-                IMMERSA was born from a University College London (UCL) project with a singular vision: to connect passionate travelers with the most breathtaking, off-the-grid locations on Earth.
+                IMMERSA was born from a University College London (UCL) student project with a singular vision: to connect passionate travelers with the most breathtaking, off-the-grid locations on Earth.
               </p>
               <p className="font-body text-lg md:text-xl leading-relaxed opacity-80 mb-8">
                 We believe that the most transformative experiences happen outside of our comfort zones. IMMERSA is designed for travelers seeking more than just destinations — it is for those looking for challenge, discovery, and personal growth.
@@ -338,11 +338,11 @@ const Index = () => {
                 {/* Jessica */}
                 <div className="text-center">
                   <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-6 rounded-full overflow-hidden bg-muted/20">
-                    <img 
-                      src={founderJessica} 
-                      alt="Jessica Valentina Mojica Muñoz" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img
+                      src={founderJessica}
+                      alt="Jessica Valentina Mojica Muñoz"
+                      className="w-full h-full object-cover" />
+                    
                   </div>
                   <h3 className="font-impact text-lg md:text-xl mb-3">
                     Jessica Valentina Mojica Muñoz
@@ -350,12 +350,12 @@ const Index = () => {
                   <p className="font-body text-sm opacity-60 mb-4 leading-relaxed max-w-sm mx-auto">
                     Project & Change Consultant passionate about innovation, impact, and transformative experiences. Jessica focuses on building meaningful projects that connect people with unique opportunities for growth and exploration.
                   </p>
-                  <a 
+                  <a
                     href="https://www.linkedin.com/in/jessica-valentina-mojica-mu%C3%B1oz-32426b1b1/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-editorial text-xs tracking-wider text-accent hover:text-accent/80 transition-colors"
-                  >
+                    className="inline-flex items-center gap-2 font-editorial text-xs tracking-wider text-accent hover:text-accent/80 transition-colors">
+                    
                     LinkedIn →
                   </a>
                 </div>
@@ -363,11 +363,11 @@ const Index = () => {
                 {/* Kevin */}
                 <div className="text-center">
                   <div className="w-48 h-48 md:w-56 md:h-56 mx-auto mb-6 rounded-full overflow-hidden bg-muted/20">
-                    <img 
-                      src={founderKevin} 
-                      alt="Kevin Steven Mojica Muñoz" 
-                      className="w-full h-full object-cover"
-                    />
+                    <img
+
+                      alt="Kevin Steven Mojica Muñoz"
+                      className="w-full h-full object-cover" src="/lovable-uploads/0c0f8a49-998f-4b22-90b3-bc76f2853275.jpg" />
+                    
                   </div>
                   <h3 className="font-impact text-lg md:text-xl mb-3">
                     Kevin Steven Mojica Muñoz
@@ -375,12 +375,12 @@ const Index = () => {
                   <p className="font-body text-sm opacity-60 mb-4 leading-relaxed max-w-sm mx-auto">
                     Master in Public Administration with a specialization in Public Policy. Kevin brings a strategic and governance perspective to IMMERSA, helping shape initiatives that combine adventure, sustainability, and social impact.
                   </p>
-                  <a 
+                  <a
                     href="https://www.linkedin.com/in/kevinmojica/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-editorial text-xs tracking-wider text-accent hover:text-accent/80 transition-colors"
-                  >
+                    className="inline-flex items-center gap-2 font-editorial text-xs tracking-wider text-accent hover:text-accent/80 transition-colors">
+                    
                     LinkedIn →
                   </a>
                 </div>
