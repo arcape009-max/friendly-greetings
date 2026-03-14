@@ -301,7 +301,7 @@ const Index = () => {
               <p className="font-body text-lg md:text-xl leading-relaxed opacity-80 mb-8">
                 We believe that the most transformative experiences happen outside of our comfort zones. IMMERSA is designed for travelers seeking more than just destinations — it is for those looking for challenge, discovery, and personal growth.
               </p>
-              <p className="font-impact text-xl md:text-2xl tracking-wide text-accent">
+              <p className="font-impact text-xl md:text-2xl tracking-wide text-primary-foreground">
                 This is where comfort disappears and growth begins.
               </p>
             </div>
