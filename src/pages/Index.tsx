@@ -395,7 +395,7 @@ const Index = () => {
               },
               {
                 q: "Are there any prerequisites before joining an experience?",
-                a: "Most of our experiences require a reasonable level of fitness and a spirit of adventure. Specific requirements vary by destination and difficulty level — each listing includes detailed preparation guidelines. Our team is always available to help you get ready."
+                a: "No special prerequisites are needed — a normal healthy condition is enough. Just be ready to walk, explore, and embrace the adventure. Our team will provide all the guidance you need before your trip."
               },
               {
                 q: "Can I schedule a private call to learn more?",
