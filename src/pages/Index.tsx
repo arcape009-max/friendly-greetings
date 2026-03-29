@@ -466,8 +466,8 @@ const Index = () => {
                   <ShieldCheck size={14} className="text-black/40" />
                   Travel Insurance
                 </li>
-                <li className="flex items-center gap-2.5 font-body text-xs text-foreground/50">
-                  <CreditCard size={14} className="text-accent" />
+                <li className="flex items-center gap-2.5 font-body text-xs text-black/50">
+                  <CreditCard size={14} className="text-black/40" />
                   Secure Payment
                 </li>
               </ul>
