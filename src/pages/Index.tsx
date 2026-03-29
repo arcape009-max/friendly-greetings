@@ -475,7 +475,7 @@ const Index = () => {
 
             {/* Contact */}
             <div>
-              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Get In Touch</h4>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-black/80">Get In Touch</h4>
               <ul className="space-y-3">
                 <li>
                   <a href="mailto:hello@immersa.co" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors">
