@@ -228,8 +228,8 @@ const Amazonas = () => {
 
           {/* Card 5 — Full width closing */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
-              <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div className="group relative grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-0 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="aspect-[4/3] md:aspect-[3/2] overflow-hidden">
                 <img src={guainiaExplorer} alt="Explorer on the Amazon trail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03]">
