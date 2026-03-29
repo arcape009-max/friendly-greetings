@@ -440,7 +440,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
             {/* Quick Links */}
             <div>
-              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Navigate</h4>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-black/80">Navigate</h4>
               <ul className="space-y-3">
                 {[
                 { icon: BookOpen, label: "How to Book" },
