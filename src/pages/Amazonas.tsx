@@ -248,8 +248,8 @@ const Amazonas = () => {
         </div>
       </section>
 
-
-
+      {/* ─── PACKAGE BUILDER ─── */}
+      <section id="package" className="py-32 md:py-40 px-6 border-t border-white/10">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] text-white/40 mb-4">
