@@ -271,8 +271,11 @@ const Index = () => {
               Send us a range of dates and we will let you know if there are any scheduled expeditions. 
             
             </p>
-            <Link to="/crew" className="btn-premium-light inline-block">
+            <Link to="/crew" className="inline-block px-10 py-4 bg-black text-white font-editorial text-[0.65rem] tracking-[0.3em] hover:bg-black/80 transition-colors">
               Join a Crew
+            </Link>
+            <Link to="/auth" className="inline-block ml-4 px-10 py-4 border border-black text-black font-editorial text-[0.65rem] tracking-[0.3em] hover:bg-black hover:text-white transition-colors">
+              Book Your Experience
             </Link>
           </ScrollReveal>
         </div>
