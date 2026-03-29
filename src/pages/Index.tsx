@@ -449,7 +449,7 @@ const Index = () => {
                 { icon: Compass, label: "Our Guarantees" }].
                 map((item) =>
                 <li key={item.label}>
-                    <a href="#" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors group">
+                    <a href="#" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors group">
                       <item.icon size={14} className="text-accent group-hover:text-foreground transition-colors" />
                       {item.label}
                     </a>
