@@ -495,8 +495,8 @@ const Index = () => {
             {/* Brand */}
             <div className="flex flex-col justify-between">
               <div>
-                <h4 className="font-impact text-lg tracking-wide mb-2 text-foreground/80">IMMERSA</h4>
-                <p className="font-body text-[0.65rem] text-foreground/40 leading-relaxed">
+                <h4 className="font-impact text-lg tracking-wide mb-2 text-black/80">IMMERSA</h4>
+                <p className="font-body text-[0.65rem] text-black/40 leading-relaxed">
                   Authentic travel. Real connection. Pushing yourself beyond the ordinary.
                 </p>
               </div>
