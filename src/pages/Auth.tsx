@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 
 const Auth = () => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [destination, setDestination] = useState("");
   const [dateRange, setDateRange] = useState<{ from?: Date; to?: Date }>({});
