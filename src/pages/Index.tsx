@@ -27,7 +27,7 @@ import founderKevin from "@/assets/founder-kevin.jpg";
 
 const Index = () => {
   return (
-    <div className="bg-background text-foreground overflow-x-hidden">
+    <div className="bg-section-dark text-section-dark-foreground overflow-x-hidden">
       <Navbar />
       {/* ─── HERO ─── */}
       <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
