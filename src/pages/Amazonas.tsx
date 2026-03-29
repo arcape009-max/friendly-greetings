@@ -220,7 +220,7 @@ const Amazonas = () => {
                   Amazon territory, its biodiversity, and its ancestral cultures.
                 </p>
               </div>
-              <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
+              <div className="aspect-[4/3] md:aspect-[3/2] overflow-hidden order-1 md:order-2">
                 <img src={guainiaCassava} alt="Traditional cassava preparation" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
             </div>
