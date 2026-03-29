@@ -136,113 +136,112 @@ const Amazonas = () => {
 
       {/* ─── LETTER ─── */}
       <section id="letter" className="py-32 md:py-48 px-6">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <ScrollReveal>
-            <p className="font-editorial text-xs tracking-[0.4em] text-white/40 mb-12">
+            <p className="font-editorial text-xs tracking-[0.4em] text-white/40 mb-4 text-center">
               A letter for the future adventurer
             </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <div className="font-body text-base md:text-lg leading-[2] space-y-8 text-white/75">
-              <p className="drop-cap">
-                You will travel to one of the most magical and remote places in
-                the Amazon: Guainía, the land of many waters, home to the
-                Indigenous peoples of Curripaco, Puinave, Tukano, and Sikuani;
-                guardian of the sacred Mavecure hills, River Star of the South,
-                and the white-sand beaches of the Atabapo River.
-              </p>
-            </div>
+            <h2 className="font-impact text-[clamp(2rem,5vw,3.5rem)] text-center mb-20">
+              WHAT AWAITS YOU
+            </h2>
           </ScrollReveal>
 
-          {/* Image: Cerros */}
+          {/* Card 1 — Image Left */}
           <ScrollReveal delay={0.1}>
-            <div className="my-16 md:my-24 w-full aspect-[16/9] overflow-hidden">
-              <img src={guainiaCerros} alt="Cerros de Mavecure rising from the jungle" className="w-full h-full object-cover" />
+            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+                <img src={guainiaCerros} alt="Cerros de Mavecure rising from the jungle" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03]">
+                <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">01 — THE LAND OF MANY WATERS</p>
+                <h3 className="font-impact text-xl md:text-2xl mb-5">Sacred Mavecure Hills</h3>
+                <p className="font-body text-sm md:text-base text-white/65 leading-relaxed">
+                  You will travel to one of the most magical and remote places in
+                  the Amazon: Guainía, the land of many waters, home to the
+                  Indigenous peoples of Curripaco, Puinave, Tukano, and Sikuani;
+                  guardian of the sacred Mavecure hills, River Star of the South,
+                  and the white-sand beaches of the Atabapo River.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.15}>
-            <div className="font-body text-base md:text-lg leading-[2] space-y-8 text-white/75">
-              <p>
-                You will explore unique ecosystems — the imposing Cerros de
-                Mavecure, rivers and streams with dark and crystal-clear waters,
-                white-sand savannas, and ancestral agroecosystems — while staying
-                in Indigenous communities, sharing their daily rhythms,
-                traditional cuisine, and knowledge passed down through
-                generations, always in harmony with nature.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Image: River */}
+          {/* Card 2 — Image Right */}
           <ScrollReveal delay={0.1}>
-            <div className="my-16 md:my-24 w-full aspect-[16/9] overflow-hidden">
-              <img src={guainiaRiver} alt="Reflections on the Inírida River" className="w-full h-full object-cover" />
+            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03] order-2 md:order-1">
+                <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">02 — UNIQUE ECOSYSTEMS</p>
+                <h3 className="font-impact text-xl md:text-2xl mb-5">Rivers & Ancestral Lands</h3>
+                <p className="font-body text-sm md:text-base text-white/65 leading-relaxed">
+                  You will explore unique ecosystems — the imposing Cerros de
+                  Mavecure, rivers and streams with dark and crystal-clear waters,
+                  white-sand savannas, and ancestral agroecosystems — while staying
+                  in Indigenous communities, sharing their daily rhythms,
+                  traditional cuisine, and knowledge passed down through
+                  generations, always in harmony with nature.
+                </p>
+              </div>
+              <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
+                <img src={guainiaRiver} alt="Reflections on the Inírida River" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.15}>
-            <div className="font-body text-base md:text-lg leading-[2] space-y-8 text-white/75">
-              <p>
-                You will walk through the territories of the jaguar and the
-                tapir, across landscapes inhabited by monkeys, deer, and giant
-                river otters. You will navigate alongside river dolphins — the
-                toninas — and discover wild orchids, carnivorous plants, and the
-                Flor de Inírida, the symbol of Guainía.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Image: Otter */}
+          {/* Card 3 — Image Left */}
           <ScrollReveal delay={0.1}>
-            <div className="my-16 md:my-24 w-full aspect-[16/9] overflow-hidden">
-              <img src={guainiaOtter} alt="Giant river otter in the wild" className="w-full h-full object-cover" />
+            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+                <img src={guainiaOtter} alt="Giant river otter in the wild" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03]">
+                <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">03 — WILDLIFE ENCOUNTERS</p>
+                <h3 className="font-impact text-xl md:text-2xl mb-5">Jaguars, Dolphins & Orchids</h3>
+                <p className="font-body text-sm md:text-base text-white/65 leading-relaxed">
+                  You will walk through the territories of the jaguar and the
+                  tapir, across landscapes inhabited by monkeys, deer, and giant
+                  river otters. You will navigate alongside river dolphins — the
+                  toninas — and discover wild orchids, carnivorous plants, and the
+                  Flor de Inírida, the symbol of Guainía.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.15}>
-            <div className="font-body text-base md:text-lg leading-[2] space-y-8 text-white/75">
-              <p>
-                Among ancient rocks, you will find petroglyphs that tell old stories,
-                engraved long before maps existed.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Image: Cassava */}
+          {/* Card 4 — Image Right */}
           <ScrollReveal delay={0.1}>
-            <div className="my-16 md:my-24 w-full aspect-[16/9] overflow-hidden">
-              <img src={guainiaCassava} alt="Traditional cassava preparation" className="w-full h-full object-cover" />
+            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03] order-2 md:order-1">
+                <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">04 — ANCIENT STORIES</p>
+                <h3 className="font-impact text-xl md:text-2xl mb-5">Petroglyphs & Sacred Traditions</h3>
+                <p className="font-body text-sm md:text-base text-white/65 leading-relaxed">
+                  Among ancient rocks, you will find petroglyphs that tell old stories,
+                  engraved long before maps existed. This is an authentic and transformative 
+                  experience — a journey to immerse yourself in the deep history of the 
+                  Amazon territory, its biodiversity, and its ancestral cultures.
+                </p>
+              </div>
+              <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
+                <img src={guainiaCassava} alt="Traditional cassava preparation" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.15}>
-            <div className="font-body text-base md:text-lg leading-[2] space-y-8 text-white/75">
-              <p>
-                This is an authentic and transformative experience. A journey to
-                immerse yourself in the deep history of the Amazon territory, its
-                biodiversity, and its ancestral cultures; to listen more and move
-                slowly; to remember that nature is not a stage, but a shared
-                home.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Image: Explorer */}
+          {/* Card 5 — Full width closing */}
           <ScrollReveal delay={0.1}>
-            <div className="my-16 md:my-24 w-full aspect-[16/9] overflow-hidden">
-              <img src={guainiaExplorer} alt="Explorer on the Amazon trail" className="w-full h-full object-cover" />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.15}>
-            <div className="font-body text-base md:text-lg leading-[2] space-y-8 text-white/75">
-              <p>
-                Here you will not find manufactured experiences. Everything
-                is authentic, everything is real. It is community-based tourism,
-                built with respect in sacred and ancestral territories that are
-                visited with humility and remembered forever.
-              </p>
+            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+                <img src={guainiaExplorer} alt="Explorer on the Amazon trail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+              <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03]">
+                <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">05 — AUTHENTIC & REAL</p>
+                <h3 className="font-impact text-xl md:text-2xl mb-5">Community-Based Tourism</h3>
+                <p className="font-body text-sm md:text-base text-white/65 leading-relaxed">
+                  Here you will not find manufactured experiences. Everything
+                  is authentic, everything is real. It is community-based tourism,
+                  built with respect in sacred and ancestral territories that are
+                  visited with humility and remembered forever.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
