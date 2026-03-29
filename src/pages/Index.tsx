@@ -14,6 +14,7 @@ import destLlanos from "@/assets/dest-llanos.jpg";
 import destNuqui from "@/assets/dest-nuqui.jpg";
 import tKayakSunset from "@/assets/testimonial-kayak-sunset.jpg";
 import tKayakPaddle from "@/assets/testimonial-kayak-paddle.jpg";
+import tLuciaKayak from "@/assets/lucia-kayak.jpg";
 import tThatchedSunset from "@/assets/testimonial-thatched-sunset.jpg";
 import tHorses from "@/assets/testimonial-horses.jpg";
 import tCanopy from "@/assets/testimonial-canopy.jpg";
