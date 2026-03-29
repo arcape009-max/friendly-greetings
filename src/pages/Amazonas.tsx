@@ -10,6 +10,7 @@ import guainiaRiver from "@/assets/guainia-river.jpg";
 import guainiaOtter from "@/assets/guainia-otter.jpg";
 import guainiaCassava from "@/assets/guainia-cassava.jpg";
 import guainiaExplorer from "@/assets/guainia-explorer.jpg";
+import guainiaOtters from "@/assets/guainia-otters.jpg";
 
 const sections = [
   { id: "hero", label: "Top" },
