@@ -460,7 +460,7 @@ const Index = () => {
 
             {/* Trust & Security */}
             <div>
-              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Trust & Security</h4>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-black/80">Trust & Security</h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2.5 font-body text-xs text-foreground/50">
                   <ShieldCheck size={14} className="text-accent" />
