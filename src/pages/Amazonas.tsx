@@ -136,7 +136,7 @@ const Amazonas = () => {
 
       {/* ─── LETTER ─── */}
       <section id="letter" className="py-32 md:py-48 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] text-white/40 mb-4 text-center">
               A letter for the future adventurer
