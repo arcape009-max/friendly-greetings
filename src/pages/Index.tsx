@@ -265,7 +265,7 @@ const Index = () => {
               Travel Together
             </p>
             <h2 className="font-impact text-[clamp(2rem,6vw,4rem)] mb-6">
-              BOOK YOUR EXPERIENCE BY JOINING A CREW
+              FIND YOUR CREW
             </h2>
             <p className="font-body text-base opacity-60 mb-10 max-w-lg mx-auto">
               Send us a range of dates and we will let you know if there are any scheduled expeditions. 
