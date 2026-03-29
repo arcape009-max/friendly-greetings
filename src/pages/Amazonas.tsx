@@ -14,6 +14,7 @@ import guainiaExplorer from "@/assets/guainia-explorer.jpg";
 const sections = [
   { id: "hero", label: "Top" },
   { id: "letter", label: "The Letter" },
+  { id: "experiences", label: "Experiences" },
   { id: "package", label: "Package" },
   { id: "itinerary-section", label: "Itinerary" },
 ];
