@@ -1,0 +1,1 @@
+ALTER TABLE public.travelers ADD COLUMN email text;
