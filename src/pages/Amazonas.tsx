@@ -275,18 +275,17 @@ const Amazonas = () => {
               { icon: TreePine, title: "NATURE & TRANQUILITY", desc: "Disconnect from the modern world and immerse yourself in the silence and beauty of pristine nature." },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="group flex items-start gap-6 md:gap-8 py-8 border-b border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-500">
-                  <div className="shrink-0 w-10 h-10 mt-1 flex items-center justify-center rounded-full border border-emerald-500/20 group-hover:border-emerald-500/40 group-hover:bg-emerald-500/[0.06] transition-all duration-500">
-                    <item.icon size={18} className="text-emerald-400/60 group-hover:text-emerald-400 transition-colors duration-500" />
+                <div className="group flex items-center gap-4 py-4 border-b border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-500">
+                  <div className="shrink-0 w-7 h-7 flex items-center justify-center">
+                    <item.icon size={14} className="text-emerald-400/50 group-hover:text-emerald-400 transition-colors duration-500" />
                   </div>
-                  <div>
-                    <h3 className="font-impact text-lg md:text-xl tracking-wide mb-2 group-hover:text-emerald-100 transition-colors duration-500">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-sm md:text-base text-white/50 group-hover:text-white/65 leading-relaxed transition-colors duration-500">
-                      {item.desc}
-                    </p>
-                  </div>
+                  <h3 className="font-impact text-sm md:text-base tracking-wide group-hover:text-emerald-100 transition-colors duration-500 shrink-0">
+                    {item.title}
+                  </h3>
+                  <span className="hidden md:block w-px h-4 bg-white/10 mx-2" />
+                  <p className="hidden md:block font-body text-xs text-white/40 group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                    {item.desc}
+                  </p>
                 </div>
               </ScrollReveal>
             ))}
