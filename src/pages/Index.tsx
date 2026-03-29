@@ -491,9 +491,9 @@ const Index = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+447411997085" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors">
+                  <a href="https://wa.me/573043677777" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors">
                     <Phone size={14} className="text-black/40" />
-                    +44 7411997085
+                    +57 304 3677777
                   </a>
                 </li>
               </ul>
