@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 
 const Auth = () => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [destination, setDestination] = useState("");
   const [dateRange, setDateRange] = useState<{ from?: Date; to?: Date }>({});
@@ -37,6 +38,7 @@ const Auth = () => {
       .from("travelers")
       .insert({
         name,
+        email,
         phone,
         destination,
         difficulty: `${format(dateRange.from, "yyyy-MM-dd")} → ${format(dateRange.to, "yyyy-MM-dd")}`,
@@ -125,6 +127,20 @@ const Auth = () => {
               placeholder="your full name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
+              className={inputClass}
+            />
+          </div>
+
+          <div>
+            <label className="font-editorial text-[0.55rem] tracking-[0.2em] text-white/40 mb-2 block">
+              EMAIL
+            </label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               className={inputClass}
             />

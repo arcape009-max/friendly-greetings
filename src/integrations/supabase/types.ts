@@ -173,6 +173,7 @@ export type Database = {
           created_at: string
           destination: string
           difficulty: string
+          email: string | null
           id: string
           name: string
           phone: string
@@ -181,6 +182,7 @@ export type Database = {
           created_at?: string
           destination: string
           difficulty?: string
+          email?: string | null
           id?: string
           name: string
           phone: string
@@ -189,6 +191,7 @@ export type Database = {
           created_at?: string
           destination?: string
           difficulty?: string
+          email?: string | null
           id?: string
           name?: string
           phone?: string
