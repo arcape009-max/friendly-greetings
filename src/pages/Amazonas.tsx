@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Calendar, Users, Plane, Clock, Menu, X } from "lucide-react";
+import { ArrowLeft, Calendar, Users, Plane, Clock, Menu, X, Waves, Mountain, Bird, Heart, Sunrise, TreePine } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import heroAmazonas from "@/assets/hero-amazonas.jpg";
