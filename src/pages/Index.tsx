@@ -443,16 +443,23 @@ const Index = () => {
               <h4 className="font-impact text-xs tracking-wide mb-5 text-black/80">Navigate</h4>
               <ul className="space-y-3">
                 {[
-                { icon: BookOpen, label: "How to Book" },
-                { icon: Heart, label: "Our Promise" },
-                { icon: Users, label: "About Us" },
-                { icon: Compass, label: "Our Guarantees" }].
+                { icon: Compass, label: "Experiences", href: "#destinations" },
+                { icon: Heart, label: "Our Activities", href: "/activities" },
+                { icon: Users, label: "About Us", href: "#founders" },
+                { icon: BookOpen, label: "Book", href: "/auth" }].
                 map((item) =>
                 <li key={item.label}>
-                    <a href="#" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors group">
-                      <item.icon size={14} className="text-black/40 group-hover:text-black transition-colors" />
-                      {item.label}
-                    </a>
+                    {item.href.startsWith("#") ? (
+                      <a href={item.href} className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors group">
+                        <item.icon size={14} className="text-black/40 group-hover:text-black transition-colors" />
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link to={item.href} className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors group">
+                        <item.icon size={14} className="text-black/40 group-hover:text-black transition-colors" />
+                        {item.label}
+                      </Link>
+                    )}
                   </li>
                 )}
               </ul>
