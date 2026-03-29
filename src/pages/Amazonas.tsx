@@ -275,17 +275,18 @@ const Amazonas = () => {
               { icon: TreePine, title: "NATURE & TRANQUILITY", desc: "Disconnect from the modern world and immerse yourself in the silence and beauty of pristine nature." },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="group flex items-center gap-4 py-4 border-b border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-500">
-                  <div className="shrink-0 w-7 h-7 flex items-center justify-center">
+                <div className="group flex items-start gap-5 py-5 border-b border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-500">
+                  <div className="shrink-0 w-7 h-7 flex items-center justify-center mt-0.5">
                     <item.icon size={14} className="text-emerald-400/50 group-hover:text-emerald-400 transition-colors duration-500" />
                   </div>
-                  <h3 className="font-impact text-sm md:text-base tracking-wide group-hover:text-emerald-100 transition-colors duration-500 shrink-0">
-                    {item.title}
-                  </h3>
-                  <span className="hidden md:block w-px h-4 bg-white/10 mx-2" />
-                  <p className="hidden md:block font-body text-xs text-white/40 group-hover:text-white/60 leading-relaxed transition-colors duration-500">
-                    {item.desc}
-                  </p>
+                  <div>
+                    <h3 className="font-impact text-sm md:text-base tracking-wide group-hover:text-emerald-100 transition-colors duration-500 mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="font-body text-xs text-white/40 group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
