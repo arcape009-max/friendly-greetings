@@ -435,7 +435,7 @@ const Index = () => {
       </section>
 
       {/* ─── TRUST & INFO ─── */}
-      <section id="partners" className="py-16 md:py-20 px-6 border-t border-border/15">
+      <section id="partners" className="py-16 md:py-20 px-6 border-t border-black/10 bg-white text-black">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
             {/* Quick Links */}
