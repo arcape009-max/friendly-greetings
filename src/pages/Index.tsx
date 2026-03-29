@@ -58,10 +58,10 @@ const Index = () => {
       </section>
 
       {/* ─── SCROLL-REVEAL INTRO ─── */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-6">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-6 bg-section-dark">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="font-body text-lg md:text-xl leading-relaxed text-foreground/80">
+            <p className="font-body text-lg md:text-xl leading-relaxed text-section-dark-foreground/80">
               We believe exploring the world's most remarkable places responsibly
               is possible. We design crew-based expeditions to extreme, remote,
               and culturally intense locations around the world. Discover new
