@@ -10,6 +10,7 @@ import guainiaRiver from "@/assets/guainia-river.jpg";
 import guainiaOtter from "@/assets/guainia-otter.jpg";
 import guainiaCassava from "@/assets/guainia-cassava.jpg";
 import guainiaExplorer from "@/assets/guainia-explorer.jpg";
+import guainiaOtters from "@/assets/guainia-otters.jpg";
 
 const sections = [
   { id: "hero", label: "Top" },
@@ -480,7 +481,7 @@ const Amazonas = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a1f0a] to-black" />
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
 
-        <div className="relative z-10 max-w-3xl mx-auto">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] text-emerald-400/60 mb-4 text-center">
               What You'll Experience
@@ -491,31 +492,41 @@ const Amazonas = () => {
             <div className="w-16 h-px bg-emerald-500/30 mx-auto mb-20" />
           </ScrollReveal>
 
-          <div className="space-y-0">
-            {[
-              { icon: Waves, title: "RIVER EXPLORATION", desc: "Navigate the winding rivers of Guainía and discover remote landscapes deep within the Amazon." },
-              { icon: Mountain, title: "CERROS DE MAVECURE", desc: "Visit the iconic granite hills rising from the jungle — one of Colombia's most breathtaking natural wonders." },
-              { icon: Bird, title: "AMAZON WILDLIFE", desc: "Spot pink river dolphins, exotic birds, monkeys, and unique rainforest species in their natural habitat." },
-              { icon: Heart, title: "INDIGENOUS CULTURE", desc: "Connect with local communities and learn about ancestral traditions, crafts, and ways of life." },
-              { icon: Sunrise, title: "SUNRISE & SUNSET VIEWS", desc: "Experience unforgettable sunrises over rivers and glowing sunsets across untouched landscapes." },
-              { icon: TreePine, title: "NATURE & TRANQUILITY", desc: "Disconnect from the modern world and immerse yourself in the silence and beauty of pristine nature." },
-            ].map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="group flex items-start gap-5 py-5 border-b border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-500">
-                  <div className="shrink-0 w-7 h-7 flex items-center justify-center mt-0.5">
-                    <item.icon size={14} className="text-emerald-400/50 group-hover:text-emerald-400 transition-colors duration-500" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-center">
+            {/* Left — List */}
+            <div className="space-y-0">
+              {[
+                { icon: Waves, title: "RIVER EXPLORATION", desc: "Navigate the winding rivers of Guainía and discover remote landscapes deep within the Amazon." },
+                { icon: Mountain, title: "CERROS DE MAVECURE", desc: "Visit the iconic granite hills rising from the jungle — one of Colombia's most breathtaking natural wonders." },
+                { icon: Bird, title: "AMAZON WILDLIFE", desc: "Spot pink river dolphins, exotic birds, monkeys, and unique rainforest species in their natural habitat." },
+                { icon: Heart, title: "INDIGENOUS CULTURE", desc: "Connect with local communities and learn about ancestral traditions, crafts, and ways of life." },
+                { icon: Sunrise, title: "SUNRISE & SUNSET VIEWS", desc: "Experience unforgettable sunrises over rivers and glowing sunsets across untouched landscapes." },
+                { icon: TreePine, title: "NATURE & TRANQUILITY", desc: "Disconnect from the modern world and immerse yourself in the silence and beauty of pristine nature." },
+              ].map((item, i) => (
+                <ScrollReveal key={item.title} delay={i * 0.08}>
+                  <div className="group flex items-start gap-5 py-5 border-b border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-500">
+                    <div className="shrink-0 w-7 h-7 flex items-center justify-center mt-0.5">
+                      <item.icon size={14} className="text-emerald-400/50 group-hover:text-emerald-400 transition-colors duration-500" />
+                    </div>
+                    <div>
+                      <h3 className="font-impact text-sm md:text-base tracking-wide group-hover:text-emerald-100 transition-colors duration-500 mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="font-body text-xs text-white/40 group-hover:text-white/60 leading-relaxed transition-colors duration-500">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-impact text-sm md:text-base tracking-wide group-hover:text-emerald-100 transition-colors duration-500 mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-xs text-white/40 group-hover:text-white/60 leading-relaxed transition-colors duration-500">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
+
+            {/* Right — Photo */}
+            <ScrollReveal delay={0.2} direction="right">
+              <div className="hidden md:block aspect-[3/4] overflow-hidden">
+                <img src={guainiaOtters} alt="Giant river otters in Guainía" className="w-full h-full object-cover" />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
