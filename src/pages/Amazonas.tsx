@@ -136,7 +136,7 @@ const Amazonas = () => {
 
       {/* ─── LETTER ─── */}
       <section id="letter" className="py-32 md:py-48 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] text-white/40 mb-4 text-center">
               A letter for the future adventurer
@@ -148,8 +148,8 @@ const Amazonas = () => {
 
           {/* Card 1 — Image Left */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
-              <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div className="group relative grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="aspect-[4/3] md:aspect-[3/2] overflow-hidden">
                 <img src={guainiaCerros} alt="Cerros de Mavecure rising from the jungle" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03]">
@@ -168,7 +168,7 @@ const Amazonas = () => {
 
           {/* Card 2 — Image Right */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+            <div className="group relative grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
               <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03] order-2 md:order-1">
                 <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">02 — UNIQUE ECOSYSTEMS</p>
                 <h3 className="font-impact text-xl md:text-2xl mb-5">Rivers & Ancestral Lands</h3>
@@ -181,7 +181,7 @@ const Amazonas = () => {
                   generations, always in harmony with nature.
                 </p>
               </div>
-              <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
+              <div className="aspect-[4/3] md:aspect-[3/2] overflow-hidden order-1 md:order-2">
                 <img src={guainiaRiver} alt="Reflections on the Inírida River" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
             </div>
@@ -189,8 +189,8 @@ const Amazonas = () => {
 
           {/* Card 3 — Image Left */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
-              <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div className="group relative grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="aspect-[4/3] md:aspect-[3/2] overflow-hidden">
                 <img src={guainiaOtter} alt="Giant river otter in the wild" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03]">
@@ -209,7 +209,7 @@ const Amazonas = () => {
 
           {/* Card 4 — Image Right */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+            <div className="group relative grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
               <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03] order-2 md:order-1">
                 <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">04 — ANCIENT STORIES</p>
                 <h3 className="font-impact text-xl md:text-2xl mb-5">Petroglyphs & Sacred Traditions</h3>
@@ -220,7 +220,7 @@ const Amazonas = () => {
                   Amazon territory, its biodiversity, and its ancestral cultures.
                 </p>
               </div>
-              <div className="aspect-[4/3] md:aspect-auto overflow-hidden order-1 md:order-2">
+              <div className="aspect-[4/3] md:aspect-[3/2] overflow-hidden order-1 md:order-2">
                 <img src={guainiaCassava} alt="Traditional cassava preparation" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
             </div>
@@ -228,8 +228,8 @@ const Amazonas = () => {
 
           {/* Card 5 — Full width closing */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
-              <div className="aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div className="group relative grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-0 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+              <div className="aspect-[4/3] md:aspect-[3/2] overflow-hidden">
                 <img src={guainiaExplorer} alt="Explorer on the Amazon trail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03]">
