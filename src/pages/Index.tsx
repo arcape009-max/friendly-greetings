@@ -258,7 +258,7 @@ const Index = () => {
       </section>
 
       {/* ─── CREW CTA ─── */}
-      <section className="section-dark py-24 md:py-32 px-6">
+      <section className="bg-white text-black py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="font-editorial text-xs tracking-[0.4em] opacity-40 mb-6">
