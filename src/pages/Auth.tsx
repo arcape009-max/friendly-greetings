@@ -38,6 +38,7 @@ const Auth = () => {
       .from("travelers")
       .insert({
         name,
+        email,
         phone,
         destination,
         difficulty: `${format(dateRange.from, "yyyy-MM-dd")} → ${format(dateRange.to, "yyyy-MM-dd")}`,
