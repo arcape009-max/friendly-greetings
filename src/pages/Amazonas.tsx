@@ -427,54 +427,6 @@ const Amazonas = () => {
         )}
       </AnimatePresence>
 
-      {/* ─── RECOMMENDED 8-DAY TOUR ─── */}
-      <section className="py-32 md:py-40 px-6 border-t border-white/10">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal>
-            <p className="font-editorial text-xs tracking-[0.4em] text-white/40 mb-4">
-              Into the Wild
-            </p>
-            <h2 className="font-impact text-[clamp(2rem,5vw,3.5rem)] mb-6">
-              Recommended 8-Day Tour
-            </h2>
-            <p className="font-body text-base md:text-lg text-white/50 leading-relaxed mb-20 max-w-xl">
-              Eight days off the grid. Rivers as roads, jungle as shelter, and ancient cultures as your compass.
-            </p>
-          </ScrollReveal>
-
-          <div className="relative pl-10 md:pl-16">
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-white/15 ml-3" />
-
-            {[
-              { day: 1, title: "Journey Along the Inírida River", desc: "River navigation to the Community of La Ceiba · Guided walk through the Honey and Handicrafts Route · Boat transfer to Cerros de Mavicure · Sunset viewing from the riverside camp." },
-              { day: 2, title: "Cerros de Mavicure", desc: "Pre-dawn guided ascent to the summit for sunrise · Indigenous storytelling session with local elders · Safari-style jungle hike (~3 hrs, moderate) · Cerro Diablo trail at sunset." },
-              { day: 3, title: "River Star of the South & Ecolodge Yupi Nai", desc: "Morning beach time at River Star of the South · Kayaking and canoeing excursion (~2 hrs) · Birdwatching and fish spotting from the water · Evening campfire storytelling under the stars." },
-              { day: 4, title: "White Sand Savannas", desc: "Walking safari through white-sand savanna ecosystems · Canoe expedition on crystal-clear reddish streams · Wildlife observation: carnivorous plants, Flor de Inírida, river dolphins · Artisanal fishing workshop with local communities." },
-              { day: 5, title: "The Resonance of the Petroglyphs", desc: "Dawn birdwatching trek in primary forest (~2 hrs) · River navigation along the sacred Atabapo River · Guided exploration of ancient petroglyphs with ancestral myth interpretation · Night excursion: amphibian and nocturnal bird observation." },
-              { day: 6, title: "Trail to Piedra Yavi", desc: "Cross-ecosystem hike to the sacred forest of Piedra Yavi (~4 hrs, moderate) · Guided forest therapy and intercultural dialogue session · Afternoon kayaking and canoeing on the Cuitara stream · Free time for swimming and nature journaling." },
-              { day: 7, title: "The Sacred Cave of the Piaroa People", desc: "Rock climb to the \"Stone of the Spring\" · Rappelling descent into the cave interior · Visit to traditional conucos: medicinal plants, Amazonian fruits, and cassava preparation · Farewell bonfire on the beach with the community." },
-              { day: 8, title: "Departure", desc: "Morning river transfer back to Inírida · Airport transfer and departure." },
-            ].map((item, i) => (
-              <ScrollReveal key={i} delay={i * 0.08}>
-                <div className="mb-14 relative">
-                  <div className="absolute -left-10 md:-left-16 top-1 w-6 h-6 rounded-full border border-white/20 bg-black flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-accent" />
-                  </div>
-                  <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-white/40 mb-2">
-                    Day {item.day}
-                  </p>
-                  <h3 className="font-impact text-xl md:text-2xl mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="font-body text-sm md:text-base text-white/60 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ─── EXPERIENCES ─── */}
       <section id="experiences" className="relative py-32 md:py-40 px-6 overflow-hidden">
