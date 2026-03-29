@@ -446,7 +446,7 @@ const Index = () => {
                 { icon: Compass, label: "Experiences", href: "#destinations" },
                 { icon: Heart, label: "Our Activities", href: "/activities" },
                 { icon: Users, label: "About Us", href: "#founders" },
-                { icon: BookOpen, label: "Book", href: "/auth" }].
+                { icon: BookOpen, label: "Book an Experience", href: "/auth" }].
                 map((item) =>
                 <li key={item.label}>
                     {item.href.startsWith("#") ? (
