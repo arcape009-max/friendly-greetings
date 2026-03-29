@@ -209,7 +209,7 @@ const Amazonas = () => {
 
           {/* Card 4 — Image Right */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
+            <div className="group relative grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-0 mb-6 overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500">
               <div className="p-8 md:p-12 flex flex-col justify-center bg-white/[0.03] order-2 md:order-1">
                 <p className="font-editorial text-[0.6rem] tracking-[0.3em] text-accent mb-4">04 — ANCIENT STORIES</p>
                 <h3 className="font-impact text-xl md:text-2xl mb-5">Petroglyphs & Sacred Traditions</h3>
