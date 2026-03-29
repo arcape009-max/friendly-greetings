@@ -450,7 +450,7 @@ const Index = () => {
                 map((item) =>
                 <li key={item.label}>
                     <a href="#" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors group">
-                      <item.icon size={14} className="text-accent group-hover:text-foreground transition-colors" />
+                      <item.icon size={14} className="text-black/40 group-hover:text-black transition-colors" />
                       {item.label}
                     </a>
                   </li>
