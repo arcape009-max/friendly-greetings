@@ -503,8 +503,8 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-14 pt-6 border-t border-border/10 text-center">
-            <p className="font-editorial text-[0.6rem] tracking-[0.4em] text-muted-foreground">
+          <div className="mt-14 pt-6 border-t border-black/10 text-center">
+            <p className="font-editorial text-[0.6rem] tracking-[0.4em] text-black/40">
               © 2026 IMMERSA. All rights reserved.
             </p>
           </div>
