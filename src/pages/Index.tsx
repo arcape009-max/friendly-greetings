@@ -220,7 +220,7 @@ const Index = () => {
               location: "Madrid, Spain",
               stars: 5,
               tags: ["Pink Dolphins", "Local Cuisine", "River Life"],
-              photos: [tLuciaKayak, tCapybara, tHorses2],
+              photos: [tLuciaKayak, tCapybara],
               quote:
               "The local food alone was worth the trip — fresh river fish, cassava bread, fruits I'd never even heard of. And then a pod of pink dolphins surfaced right beside our canoe. I cried. Honestly, I still can't believe it was real."
             }];
