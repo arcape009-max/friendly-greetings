@@ -435,12 +435,12 @@ const Index = () => {
       </section>
 
       {/* ─── TRUST & INFO ─── */}
-      <section id="partners" className="py-16 md:py-20 px-6 border-t border-border/15">
+      <section id="partners" className="py-16 md:py-20 px-6 border-t border-black/10 bg-white text-black">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
             {/* Quick Links */}
             <div>
-              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Navigate</h4>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-black/80">Navigate</h4>
               <ul className="space-y-3">
                 {[
                 { icon: BookOpen, label: "How to Book" },
@@ -449,8 +449,8 @@ const Index = () => {
                 { icon: Compass, label: "Our Guarantees" }].
                 map((item) =>
                 <li key={item.label}>
-                    <a href="#" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors group">
-                      <item.icon size={14} className="text-accent group-hover:text-foreground transition-colors" />
+                    <a href="#" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors group">
+                      <item.icon size={14} className="text-black/40 group-hover:text-black transition-colors" />
                       {item.label}
                     </a>
                   </li>
@@ -460,14 +460,14 @@ const Index = () => {
 
             {/* Trust & Security */}
             <div>
-              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Trust & Security</h4>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-black/80">Trust & Security</h4>
               <ul className="space-y-3">
-                <li className="flex items-center gap-2.5 font-body text-xs text-foreground/50">
-                  <ShieldCheck size={14} className="text-accent" />
+                <li className="flex items-center gap-2.5 font-body text-xs text-black/50">
+                  <ShieldCheck size={14} className="text-black/40" />
                   Travel Insurance
                 </li>
-                <li className="flex items-center gap-2.5 font-body text-xs text-foreground/50">
-                  <CreditCard size={14} className="text-accent" />
+                <li className="flex items-center gap-2.5 font-body text-xs text-black/50">
+                  <CreditCard size={14} className="text-black/40" />
                   Secure Payment
                 </li>
               </ul>
@@ -475,17 +475,17 @@ const Index = () => {
 
             {/* Contact */}
             <div>
-              <h4 className="font-impact text-xs tracking-wide mb-5 text-foreground/80">Get In Touch</h4>
+              <h4 className="font-impact text-xs tracking-wide mb-5 text-black/80">Get In Touch</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="mailto:hello@immersa.co" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors">
-                    <Mail size={14} className="text-accent" />
+                  <a href="mailto:hello@immersa.co" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors">
+                    <Mail size={14} className="text-black/40" />
                     hello@immersa.co
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+447411997085" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors">
-                    <Phone size={14} className="text-accent" />
+                  <a href="tel:+447411997085" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors">
+                    <Phone size={14} className="text-black/40" />
                     +44 7411997085
                   </a>
                 </li>
@@ -495,16 +495,16 @@ const Index = () => {
             {/* Brand */}
             <div className="flex flex-col justify-between">
               <div>
-                <h4 className="font-impact text-lg tracking-wide mb-2 text-foreground/80">IMMERSA</h4>
-                <p className="font-body text-[0.65rem] text-foreground/40 leading-relaxed">
+                <h4 className="font-impact text-lg tracking-wide mb-2 text-black/80">IMMERSA</h4>
+                <p className="font-body text-[0.65rem] text-black/40 leading-relaxed">
                   Authentic travel. Real connection. Pushing yourself beyond the ordinary.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-14 pt-6 border-t border-border/10 text-center">
-            <p className="font-editorial text-[0.6rem] tracking-[0.4em] text-muted-foreground">
+          <div className="mt-14 pt-6 border-t border-black/10 text-center">
+            <p className="font-editorial text-[0.6rem] tracking-[0.4em] text-black/40">
               © 2026 IMMERSA. All rights reserved.
             </p>
           </div>
