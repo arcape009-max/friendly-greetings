@@ -484,8 +484,8 @@ const Index = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+447411997085" className="flex items-center gap-2.5 font-body text-xs text-foreground/50 hover:text-foreground transition-colors">
-                    <Phone size={14} className="text-accent" />
+                  <a href="tel:+447411997085" className="flex items-center gap-2.5 font-body text-xs text-black/50 hover:text-black transition-colors">
+                    <Phone size={14} className="text-black/40" />
                     +44 7411997085
                   </a>
                 </li>
